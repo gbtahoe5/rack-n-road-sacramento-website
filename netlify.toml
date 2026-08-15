@@ -1,0 +1,74 @@
+[build]
+  publish = "production"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/store/sacramento/"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/bike-racks-101"
+  to = "/bike-racks-101.html"
+  status = 200
+
+[[redirects]]
+  from = "/cargo-boxes-sacramento"
+  to = "/cargo-boxes-sacramento.html"
+  status = 200
+
+[[redirects]]
+  from = "/decked-cargo-slides"
+  to = "/decked-cargo-slides.html"
+  status = 200
+
+[[redirects]]
+  from = "/e-bike-racks-sacramento"
+  to = "/e-bike-racks-sacramento.html"
+  status = 200
+
+[[redirects]]
+  from = "/smartcap-canopies-and-caps"
+  to = "/smartcap-canopies-and-caps.html"
+  status = 200
+
+[[redirects]]
+  from = "/thule-racks"
+  to = "/thule-racks.html"
+  status = 200
+
+[[redirects]]
+  from = "/trailer-hitches"
+  to = "/trailer-hitches.html"
+  status = 200
+
+[[redirects]]
+  from = "/what-we-stand-for"
+  to = "/what-we-stand-for.html"
+  status = 200
+
+[[redirects]]
+  from = "/yakima-racks"
+  to = "/yakima-racks.html"
+  status = 200
+
+[[redirects]]
+  from = "/ikamper-rooftop-tents-sacramento"
+  to = "/ikamper-rooftop-tents-sacramento.html"
+  status = 200
+
+[[redirects]]
+  from = "/ikamper-rooftop-tents"
+  to = "/ikamper-rooftop-tents-sacramento.html"
+  status = 200
+
+[[redirects]]
+  from = "/store/sacramento/ikamper-rooftop-tents/"
+  to = "/ikamper-rooftop-tents-sacramento.html"
+  status = 200

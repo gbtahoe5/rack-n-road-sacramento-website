@@ -1,0 +1,1710 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>iKamper Installation — Rack N Road Sacramento</title>
+<meta name="description" content="iKamper is a premium rooftop tent. The setup is what protects the ownership experience. Rack N Road helps you get the bars, fitment, weight support, and installation right from day one." />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#1d1d1f;
+    --ink-2:#2c2c2e;
+    --muted:#6e6e73;
+    --muted-2:#86868b;
+    --line:rgba(0,0,0,0.08);
+    --line-2:rgba(0,0,0,0.12);
+    --bg:#ffffff;
+    --bg-soft:#f5f5f7;
+    --bg-softer:#fafafa;
+    --accent:#c0392b;
+    --accent-ink:#a53125;
+    --max:1180px;
+    --pad: clamp(20px, 3.5vw, 56px);
+    --radius:18px;
+    --radius-lg:28px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.04), 0 4px 14px rgba(0,0,0,.06);
+    --shadow-md: 0 6px 18px rgba(0,0,0,.06), 0 22px 60px rgba(0,0,0,.08);
+  }
+  *{box-sizing:border-box}
+  .floating-contact{position:fixed;bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));right:1.25rem;z-index:999;display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.35rem;background:#FFD700;color:#1d1d1f;text-decoration:none;font-weight:700;font-size:.85rem;border-radius:100px;box-shadow:0 4px 16px rgba(0,0,0,.15);transition:all .25s;white-space:nowrap}
+  .floating-contact:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.2);background:#f5c800}
+  .floating-contact svg{width:16px;height:16px}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;font-size:91.2%}
+  body{
+    margin:0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-feature-settings:"ss01","cv11";
+    line-height:1.5;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:saturate(180%) blur(20px);
+    -webkit-backdrop-filter:saturate(180%) blur(20px);
+    background:rgba(255,255,255,.78);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--max);margin:0 auto;
+    padding: 14px var(--pad);
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+  }
+  .brand{
+    font-weight:800;letter-spacing:-.02em;font-size:18px;
+    display:flex;align-items:baseline;gap:6px;
+  }
+  .brand .dot{color:var(--accent)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-size:14px;color:var(--muted);font-weight:500}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{
+    background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;
+    font-size:14px;font-weight:500;letter-spacing:-.005em;
+    transition: background .2s ease, transform .15s ease;
+  }
+  .nav-cta:hover{background:#000;transform:translateY(-1px)}
+  @media (max-width:760px){
+    .nav-links{display:none}
+  }
+
+  /* ---------- TYPOGRAPHY ---------- */
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-size:12px;font-weight:600;
+    color:var(--accent);
+    margin:0 0 18px;
+  }
+  h1,h2,h3,h4{margin:0;letter-spacing:-.025em;color:var(--ink)}
+  h1{
+    font-size: clamp(36px, 4.4vw, 52px);
+    line-height:1.06;
+    font-weight:700;
+    letter-spacing:-.035em;
+  }
+  h2{
+    font-size: clamp(28px, 3.25vw, 40px);
+    line-height:1.12;
+    font-weight:700;
+    letter-spacing:-.03em;
+  }
+  h3{
+    font-size: clamp(20px, 2.1vw, 26px);
+    line-height:1.2;
+    font-weight:600;
+    letter-spacing:-.015em;
+  }
+  p{margin:0;color:var(--ink-2)}
+  .lead{
+    font-size: clamp(18px, 1.5vw, 22px);
+    line-height:1.5;
+    color:var(--muted);
+    font-weight:400;
+    letter-spacing:-.005em;
+  }
+  .small{font-size:14px;color:var(--muted)}
+
+  /* ---------- LAYOUT ---------- */
+  section{padding: clamp(68px, 7.5vw, 108px) var(--pad)}
+  .container{max-width:var(--max);margin:0 auto}
+  .section-head{max-width:760px;margin:0 auto clamp(40px, 6vw, 80px);text-align:center}
+  .section-head p{margin-top:18px}
+
+  /* ---------- BUTTONS ---------- */
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:16px 28px;border-radius:999px;
+    font-weight:500;font-size:16px;letter-spacing:-.005em;
+    transition: transform .18s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+    border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--ink);color:#fff;
+  }
+  .btn-primary:hover{background:#000;transform:translateY(-1px);box-shadow:var(--shadow-sm)}
+  .btn-ghost{
+    background:transparent;color:var(--ink);
+    border-color:var(--line-2);
+  }
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-1px)}
+  .btn-light{
+    background:#fff;color:var(--ink);
+  }
+  .btn-light:hover{background:rgba(255,255,255,.9);transform:translateY(-1px)}
+  .btn-outline-light{
+    background:transparent;color:#fff;border-color:rgba(255,255,255,.5);
+  }
+  .btn-outline-light:hover{border-color:#fff}
+  /* Red pill — used for hero + final CTA over dark backgrounds */
+  .btn-red{
+    background:var(--accent);color:#fff;
+    border-color:var(--accent);
+  }
+  .btn-red:hover{
+    background:var(--accent-ink);border-color:var(--accent-ink);
+    transform:translateY(-1px);
+    box-shadow: 0 2px 4px rgba(168,28,44,.22), 0 14px 36px rgba(168,28,44,.30);
+  }
+  /* Quieter ghost over dark hero — text-only with underline on hover */
+  .btn-quiet-light{
+    background:transparent;color:rgba(255,255,255,.85);
+    padding:14px 8px;border:0;
+    font-weight:500;
+  }
+  .btn-quiet-light:hover{color:#fff;background:transparent;transform:translateX(2px)}
+  .btn .arrow{transition:transform .2s ease}
+  .btn:hover .arrow{transform:translateX(3px)}
+
+  /* Primary CTA gets a touch more presence — bigger pad, stronger hover lift */
+  .btn-primary.btn-cta,
+  .btn-light.btn-cta{
+    padding:18px 32px;font-size:16.5px;font-weight:600;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.10);
+  }
+  .btn-primary.btn-cta:hover,
+  .btn-light.btn-cta:hover{
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 14px 36px rgba(0,0,0,.16);
+    transform:translateY(-2px);
+  }
+
+  /* CTA block: button + supporting "Call or Text Sacramento" line */
+  .cta-block{
+    display:inline-flex;flex-direction:column;align-items:center;gap:14px;
+  }
+  .cta-block.left{align-items:flex-start}
+  .cta-support{
+    font-size:13.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--muted);margin:0;
+    transition: color .2s ease;
+  }
+  .cta-support a{color:inherit}
+  .cta-support a:hover{color:var(--ink)}
+  .cta-support .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#22a06b;margin-right:8px;vertical-align:middle;box-shadow:0 0 0 3px rgba(34,160,107,.15)}
+  /* Light-on-dark variant for hero / final CTA */
+  .cta-support.on-dark{color:rgba(255,255,255,.78)}
+  .cta-support.on-dark a:hover{color:#fff}
+  .cta-support.on-dark .dot{background:#5fdca0;box-shadow:0 0 0 3px rgba(95,220,160,.18)}
+
+  /* Group the primary + secondary in cta-row but stack the support line below */
+  .cta-stack{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+  .cta-stack.center{align-items:center}
+  .cta-stack .row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .cta-stack.center .row{justify-content:center}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height: clamp(600px, 82vh, 760px);
+    padding: clamp(88px, 10vw, 132px) var(--pad) clamp(60px, 7vw, 92px);
+    display:flex;align-items:center;
+    overflow:hidden;
+    color:#fff;
+    background:#0a0a0a;
+  }
+  .hero-bg{
+    position:absolute;inset:0;
+    background-image:url('rnr-ikamper-assets/hero.jpg');
+    background-size:cover;
+    /* Push the vehicle and tent to the right, preserving a quiet text field. */
+    background-position:78% center;
+    transform:scale(1.015);
+    will-change:transform;
+  }
+  /* Soft left-to-right wash — keeps the photo bright and real,
+     dark only enough on the left for crisp white type. */
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(90deg,
+        rgba(7,8,10,0.90) 0%,
+        rgba(7,8,10,0.78) 30%,
+        rgba(7,8,10,0.40) 52%,
+        rgba(7,8,10,0.08) 74%,
+        rgba(10,12,16,0)    100%),
+      linear-gradient(180deg, rgba(0,0,0,0) 65%, rgba(0,0,0,0.22) 100%);
+  }
+  .hero-inner{
+    position:relative;z-index:2;
+    max-width:var(--max);margin:0 auto;
+    width:100%;
+  }
+  .hero-content{
+    /* Wider measure so the headline breaks naturally into 2–3 generous lines
+       on desktop, 3–4 on tablet, 4–5 on phone. */
+    max-width:610px;
+  }
+  .hero h1{
+    color:#fff;
+    font-weight:700;
+    font-size: clamp(36px, 4.4vw, 52px);
+    line-height:1.06;
+    letter-spacing:-.028em;
+    text-wrap:balance;
+    /* Subtle shadow only — readability backstop, not a band */
+    text-shadow: 0 2px 22px rgba(0,0,0,.18);
+  }
+  .hero .lead{
+    color:rgba(255,255,255,.92);
+    margin-top:24px;max-width:560px;
+    font-size: clamp(16px, 1.15vw, 18px);
+    line-height:1.55;
+    font-weight:400;
+    text-shadow: 0 1px 16px rgba(0,0,0,.15);
+  }
+  .hero .eyebrow{
+    color:#ff6b76;margin-bottom:26px;
+    text-shadow: 0 1px 12px rgba(0,0,0,.20);
+  }
+  .hero .cta-stack{margin-top:34px;align-items:flex-start}
+
+  /* Mobile: image re-centers slightly, overlay becomes a vertical wash
+     so the headline reads without forcing the photo into a black box. */
+  @media (max-width:760px){
+    .hero-bg{
+      background-position:62% center;
+    }
+    .hero-bg::after{
+      background:
+        linear-gradient(180deg,
+          rgba(10,12,16,0.55) 0%,
+          rgba(10,12,16,0.32) 38%,
+          rgba(10,12,16,0.42) 70%,
+          rgba(10,12,16,0.65) 100%);
+    }
+    .hero-content{max-width:none}
+    .hero .lead{max-width:none}
+    .hero h1{font-size: clamp(34px, 9vw, 42px)}
+  }
+
+  /* ---------- TRUST BAND ---------- */
+  .trust{
+    background:#fafafa;
+    padding: 28px var(--pad);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .trust-row{
+    max-width:var(--max);margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:0;
+  }
+  .trust-item{
+    display:flex;align-items:center;gap:10px;
+    padding:10px 14px;
+    flex:1;justify-content:center;
+    font-size:14.5px;color:var(--muted);
+    font-weight:500;letter-spacing:-.005em;
+    position:relative;white-space:nowrap;
+  }
+  .trust-item + .trust-item::before{
+    content:"";position:absolute;left:0;top:50%;
+    height:22px;width:1px;
+    background:var(--line-2);transform:translateY(-50%);
+  }
+  .trust-ico{
+    width:20px;height:20px;flex-shrink:0;
+    stroke:currentColor;stroke-width:1.6;
+    fill:none;stroke-linecap:round;stroke-linejoin:round;
+  }
+  @media (max-width:980px){
+    .trust-row{flex-wrap:wrap;gap:14px 24px;justify-content:center}
+    .trust-item{flex:0 0 auto;padding:6px 10px;font-size:14px}
+    .trust-item + .trust-item::before{display:none}
+  }
+
+  /* ---------- WHY iKAMPER ---------- */
+  .why-ikamper{background:var(--bg)}
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .feature{
+    padding:36px;
+    border-radius:var(--radius);
+    background:var(--bg-soft);
+    border:1px solid transparent;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .feature:hover{
+    transform:translateY(-2px);
+    background:#fff;
+    border-color:var(--line);
+    box-shadow:var(--shadow-md);
+  }
+  .feature h3{margin-bottom:10px}
+  .feature p{font-size:15px;color:var(--muted);line-height:1.55}
+  @media (max-width:860px){.feature-grid{grid-template-columns:1fr}}
+
+  /* ---------- WHY INSTALL MATTERS ---------- */
+  .install-matters{background:#0a0a0a;color:#fff}
+  .install-matters h2{color:#fff}
+  .install-matters .lead{color:rgba(255,255,255,.7)}
+  .install-matters .eyebrow{color:#ff6b76}
+  .matters-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+    background:rgba(255,255,255,.08);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    margin-top:60px;
+  }
+  .matters-cell{
+    background:#0a0a0a;
+    padding:40px 36px;
+  }
+  .matters-cell h3{color:#fff;margin-bottom:10px}
+  .matters-cell p{color:rgba(255,255,255,.62);font-size:15px}
+  .matters-num{
+    font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+    color:#ff6b76;margin-bottom:14px;font-weight:600;
+  }
+  @media (max-width:760px){
+    .matters-grid{grid-template-columns:1fr}
+  }
+
+  /* ---------- FOUNDATION (Vehicle & Setup) ---------- */
+  .compat{background:var(--bg-soft)}
+  .compat-row{
+    display:grid;grid-template-columns:1.05fr 1fr;
+    gap: clamp(48px, 6vw, 88px);
+    align-items:start;
+  }
+  .compat-eyebrow-rule{
+    display:flex;align-items:center;gap:14px;
+    margin-bottom:22px;
+  }
+  .compat-eyebrow-rule .eyebrow{margin:0}
+  .compat-eyebrow-rule::after{
+    content:"";flex:1;height:1px;background:var(--line-2);
+    opacity:.6;max-width:80px;
+  }
+  .compat h2{max-width:520px;letter-spacing:-.032em}
+  .compat .lead{margin-top:22px;max-width:520px}
+  .compat-bullets{
+    display:flex;flex-direction:column;gap:0;
+    margin-top:44px;
+    border-top:1px solid var(--line);
+  }
+  .compat-bullet{
+    display:flex;gap:22px;align-items:flex-start;
+    padding:24px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .compat-bullet .check{
+    flex:0 0 32px;width:32px;height:32px;border-radius:50%;
+    background:var(--ink);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-weight:600;letter-spacing:-.01em;
+    margin-top:2px;
+  }
+  .compat-bullet .check svg{width:14px;height:14px;stroke:#fff;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .compat-bullet h4{
+    font-size:17px;font-weight:600;
+    margin:0 0 6px;color:var(--ink);
+    letter-spacing:-.01em;line-height:1.3;
+  }
+  .compat-bullet p{font-size:15px;color:var(--muted);line-height:1.55}
+  .compat-card{
+    background:#fff;border-radius:var(--radius-lg);
+    padding: clamp(32px, 3.6vw, 48px);
+    border:1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(0,0,0,.03), 0 18px 50px rgba(0,0,0,.06);
+    position:sticky;top:96px;
+  }
+  .compat-card-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:22px;gap:16px;
+  }
+  .compat-card h3{
+    margin:0;font-size:22px;font-weight:600;letter-spacing:-.015em;
+  }
+  .compat-card-head .small{
+    font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);font-weight:500;
+  }
+  .compat-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column}
+  .compat-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:16px 0;border-bottom:1px solid var(--line);
+    font-size:15px;color:var(--ink-2);
+    gap:12px;
+  }
+  .compat-list li:last-child{border-bottom:0}
+  .compat-list .vehicle{flex:1;line-height:1.35}
+  .compat-list .badge{
+    font-weight:600;font-size:12px;
+    letter-spacing:.02em;
+    padding:5px 11px;border-radius:999px;
+    white-space:nowrap;flex-shrink:0;
+    border:1px solid transparent;
+  }
+  .compat-list .badge.yes{
+    color:#136a30;background:#e2f3e6;border-color:#c5e6cc;
+  }
+  .compat-list .badge.maybe{
+    color:#8b5a00;background:#fff2cc;border-color:#f0d995;
+  }
+  .compat-list .badge.no{
+    color:#9c1c2a;background:#fde2e4;border-color:#f4c1c5;
+  }
+  .compat-card-foot{
+    margin-top:24px;padding-top:20px;
+    border-top:1px solid var(--line);
+    font-size:13.5px;color:var(--muted);line-height:1.55;
+    display:flex;gap:10px;align-items:flex-start;
+  }
+  .compat-card-foot svg{flex-shrink:0;margin-top:2px;width:14px;height:14px;stroke:var(--muted);fill:none;stroke-width:1.6}
+  .compat-cta-row{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+  @media (max-width:980px){
+    .compat-row{grid-template-columns:1fr;gap:48px}
+    .compat-card{position:static}
+  }
+
+  /* ---------- STANDARD (What we stand behind) ---------- */
+  .standard{background:#fff}
+  .standard-row{
+    display:grid;grid-template-columns:1.05fr 1fr;
+    gap: clamp(48px, 6vw, 88px);
+    align-items:start;
+  }
+  .standard h2{max-width:540px;letter-spacing:-.032em}
+  .standard .lead{margin-top:22px;max-width:560px}
+  .standard-body{
+    margin-top:24px;max-width:580px;
+  }
+  .standard-body p{
+    font-size:16px;color:var(--ink-2);line-height:1.7;
+    margin:0 0 18px;
+  }
+  .standard-body p:last-child{margin-bottom:0}
+  .standard-callout{
+    margin: 36px 0 28px;
+    padding: 28px 32px;
+    background: var(--bg-soft);
+    border-left: 3px solid var(--ink);
+    border-radius: 6px 14px 14px 6px;
+    max-width:580px;
+  }
+  .standard-callout-lead{
+    font-size: clamp(22px, 2vw, 28px);
+    line-height: 1.28;
+    font-weight: 600;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin: 0;
+    text-wrap:balance;
+  }
+  .standard-callout-tail{
+    margin: 10px 0 0;
+    font-size: 15px;
+    color: var(--muted);
+    font-style: italic;
+    letter-spacing: -.005em;
+  }
+  .standard-closing{
+    margin-top:28px;max-width:560px;
+    font-size:15.5px;color:var(--ink);font-weight:500;
+    letter-spacing:-.005em;font-style:italic;
+    line-height:1.55;
+    padding-top:24px;border-top:1px solid var(--line);
+  }
+  .standard-cta-row{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+
+  .standard-card{
+    background: var(--bg-soft);
+    border-radius: var(--radius-lg);
+    padding: clamp(32px, 3.6vw, 44px);
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(0,0,0,.03), 0 18px 50px rgba(0,0,0,.06);
+    position: sticky;top: 96px;
+  }
+  .standard-card-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:22px;gap:16px;
+  }
+  .standard-card h3{
+    margin:0;font-size:22px;font-weight:600;letter-spacing:-.015em;
+  }
+  .standard-card-head .small{
+    font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);font-weight:500;
+  }
+  .standard-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column}
+  .standard-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:16px 0;border-bottom:1px solid var(--line);
+    gap:12px;
+  }
+  .standard-list li:first-child{
+    padding-top:8px;
+    margin-bottom:6px;
+    border-bottom:1px solid var(--line-2);
+  }
+  .standard-list li:last-child{border-bottom:0}
+  .standard-list .brand{
+    font-weight:600;font-size:15.5px;letter-spacing:-.005em;
+    color:var(--ink);line-height:1.35;flex:1;
+  }
+  .standard-list li:first-child .brand{
+    font-size:17px;letter-spacing:-.012em;
+  }
+  .standard-list .what{
+    font-size:12.5px;font-weight:600;letter-spacing:.02em;
+    padding:5px 11px;border-radius:999px;white-space:nowrap;
+    border:1px solid var(--line-2);
+    color:var(--muted);background:transparent;
+  }
+  .standard-list .what.featured{
+    color:#fff;background:var(--ink);border-color:var(--ink);
+  }
+  .standard-list .what.sold{
+    color:#fff;background:var(--ink);border-color:var(--ink);
+  }
+  .standard-list .what.evaluate{
+    color:#8b5a00;background:#fff2cc;border-color:#f0d995;
+  }
+  .standard-card-foot{
+    margin-top:22px;padding-top:18px;
+    border-top:1px solid var(--line);
+    font-size:13.5px;color:var(--muted);line-height:1.55;
+  }
+  @media (max-width:980px){
+    .standard-row{grid-template-columns:1fr;gap:48px}
+    .standard-card{position:static}
+    .standard-callout{padding:24px 24px}
+  }
+
+  /* ---------- WHAT WE SOLVE ---------- */
+  .solve-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .solve-card{
+    background:#fff;
+    padding:32px;border-radius:var(--radius);
+    border:1px solid var(--line);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .solve-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .solve-card .ico{
+    width:44px;height:44px;border-radius:12px;
+    background:var(--bg-soft);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--ink);
+    margin-bottom:18px;
+  }
+  .solve-card h3{font-size:18px;margin-bottom:8px;font-weight:600}
+  .solve-card p{font-size:14.5px;color:var(--muted);line-height:1.55}
+  @media (max-width:860px){.solve-grid{grid-template-columns:1fr}}
+  @media (min-width:861px) and (max-width:1100px){.solve-grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* ---------- WHICH iKAMPER ---------- */
+  .which{background:var(--bg-soft)}
+  .which-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
+    max-width:1000px;margin:0 auto;
+  }
+  .which-card{
+    background:#fff;border-radius:var(--radius-lg);
+    padding:44px 40px;border:1px solid var(--line);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .which-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .which-card .tag{
+    display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:600;color:var(--accent);margin-bottom:14px;
+  }
+  .which-card h3{margin-bottom:14px}
+  .which-card p{font-size:15px;color:var(--muted);line-height:1.6}
+  .which-card ul{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+  .which-card li{font-size:14.5px;color:var(--ink-2);position:relative;padding-left:22px}
+  .which-card li::before{
+    content:"";position:absolute;left:0;top:9px;
+    width:8px;height:8px;border-radius:50%;
+    background:var(--ink);opacity:.7;
+  }
+  .which-stocked{
+    grid-column:1/-1;
+    background:linear-gradient(135deg,#1d1d1f 0%, #2c2c2e 100%);
+    color:#fff;border:1px solid #2c2c2e;
+  }
+  .which-stocked h3{color:#fff}
+  .which-stocked p, .which-stocked li{color:rgba(255,255,255,.78)}
+  .which-stocked .tag{color:#ff6b76}
+  .which-stocked li::before{background:#ff6b76;opacity:1}
+  @media (max-width:760px){.which-grid{grid-template-columns:1fr}}
+
+  /* ---------- COMMON MISTAKES ---------- */
+  .mistakes-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+    background:var(--line);
+    border-radius:var(--radius-lg);overflow:hidden;
+    border:1px solid var(--line);
+  }
+  .mistake{
+    background:#fff;
+    padding:36px 32px;
+  }
+  .mistake-num{
+    font-family:'Inter',sans-serif;
+    font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:10px;
+  }
+  .mistake h3{margin-bottom:8px;font-size:19px}
+  .mistake p{font-size:14.5px;color:var(--muted);line-height:1.6}
+  @media (max-width:760px){
+    .mistakes-grid{grid-template-columns:1fr}
+  }
+
+  /* ---------- LIFE WITH ---------- */
+  .life{background:#fafafa}
+  .life-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center
+  }
+  .life-points{display:flex;flex-direction:column;gap:28px;margin-top:32px}
+  .life-point h4{font-size:17px;font-weight:600;margin:0 0 6px}
+  .life-point p{font-size:15px;color:var(--muted)}
+  .life-callout{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:48px;box-shadow:var(--shadow-sm);
+    position:relative;
+    overflow:hidden;
+  }
+  .life-photo{width:calc(100% + 96px);max-width:none;height:360px;object-fit:cover;object-position:center 45%;margin:-48px -48px 36px}
+  .life-callout blockquote{
+    margin:0;font-size:22px;line-height:1.4;font-weight:500;
+    letter-spacing:-.015em;color:var(--ink);
+    text-wrap:balance;
+  }
+  .life-callout cite{
+    display:block;margin-top:24px;font-size:14px;color:var(--muted);font-style:normal;
+  }
+  @media (max-width:900px){.life-row{grid-template-columns:1fr;gap:40px}}
+
+  /* ---------- PROCESS ---------- */
+  .process-list{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+    counter-reset: step;
+  }
+  .step{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:32px;position:relative;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .step:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .step::before{
+    counter-increment:step;
+    content:counter(step,decimal-leading-zero);
+    font-size:14px;font-weight:600;color:var(--muted);
+    letter-spacing:.1em;margin-bottom:14px;display:block;
+  }
+  .step h3{font-size:18px;margin-bottom:8px}
+  .step p{font-size:14.5px;color:var(--muted);line-height:1.6}
+  @media (max-width:980px){.process-list{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:600px){.process-list{grid-template-columns:1fr}}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--bg-soft)}
+  .faq-cats{
+    max-width:1180px;margin:0 auto;
+    display:flex;flex-direction:column;
+    gap: clamp(40px, 5vw, 64px);
+  }
+  .faq-cat-title{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;
+    margin:0 0 18px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
+    display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  }
+  .faq-cat-title .count{
+    color:var(--muted);font-weight:500;font-size:11px;letter-spacing:.1em;
+  }
+  .faq-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:8px 14px;
+  }
+  .faq-item{
+    background:#fff;border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+    transition: border-color .2s ease, box-shadow .2s ease;
+    align-self:start;
+  }
+  .faq-summary{
+    padding:16px 20px 6px;
+    font-size:15px;font-weight:600;letter-spacing:-.01em;color:var(--ink);
+    line-height:1.35;
+  }
+  .faq-body{
+    padding:0 20px 18px;
+    font-size:14px;color:var(--muted);line-height:1.6;
+  }
+  @media (max-width:880px){
+    .faq-grid{grid-template-columns:1fr}
+  }
+
+  /* ---------- LINEUP (Skycamp 4.0) ---------- */
+  .lineup{
+    background:#efece6;
+    padding: clamp(72px, 7.5vw, 108px) var(--pad);
+    overflow:hidden;
+  }
+  .lineup .section-head{margin-bottom: clamp(40px, 6vw, 64px)}
+  .lineup .eyebrow{color:var(--ink);opacity:.55}
+  .lineup-tagline{
+    text-align:center;
+    font-size: clamp(14px, 1.1vw, 16px);
+    letter-spacing:.04em;color:var(--muted);
+    margin: 0 auto clamp(40px, 5vw, 64px);
+    max-width:540px;
+  }
+  .lineup-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap: clamp(20px, 3vw, 56px);
+    align-items:end;
+    max-width:1280px;margin:0 auto;
+  }
+  .lineup-card{
+    text-align:center;
+    position:relative;
+  }
+  .lineup-shell{
+    display:flex;align-items:flex-end;justify-content:center;
+    height: clamp(220px, 28vw, 360px);
+    margin-bottom: 28px;
+    position:relative;
+  }
+  .lineup-shell svg{
+    display:none;
+  }
+  .lineup-photo{
+    width:100%;height:100%;object-fit:contain;object-position:center bottom;
+    filter:drop-shadow(0 24px 24px rgba(0,0,0,.16));
+    mix-blend-mode:multiply;
+  }
+  .lineup-name{
+    font-size: clamp(32px, 3.6vw, 46px);
+    font-weight:750;
+    letter-spacing:-.025em;
+    color:var(--ink);
+    line-height:1;
+    margin: 0 0 28px;
+  }
+  .lineup-pricing{
+    display:flex;flex-direction:column;gap:14px;
+    margin-bottom:28px;
+  }
+  .lineup-price-block .price{
+    font-size:18px;font-weight:700;letter-spacing:-.01em;
+    color:var(--ink);
+  }
+  .lineup-price-block .price-label{
+    font-size:13px;color:var(--muted);margin-top:2px;
+  }
+  .lineup-specs{
+    display:flex;flex-direction:column;gap:14px;
+    border-top:1px solid rgba(0,0,0,.12);
+    padding-top:20px;
+    font-size:13px;color:var(--muted);
+    line-height:1.4;
+  }
+  .lineup-specs .label{color:var(--muted);margin-bottom:2px}
+  .lineup-specs .value{color:var(--ink);font-weight:600;font-size:14px}
+  .lineup-badge{
+    position:absolute;
+    top:0;left:50%;transform:translateX(-50%);
+    background:#a82731;color:#fff;
+    padding:5px 14px;border-radius:999px;
+    font-size:12px;font-weight:600;letter-spacing:.04em;
+    text-transform:uppercase;
+    z-index:2;
+    box-shadow: 0 4px 14px rgba(168,39,49,.35);
+  }
+  .lineup-cta-row{
+    margin: clamp(40px, 6vw, 72px) auto 0;
+    display:flex;flex-wrap:wrap;justify-content:center;gap:14px;
+    max-width:760px;
+  }
+  .lineup-note{
+    text-align:center;
+    margin-top:24px;font-size:13.5px;color:var(--muted);
+    max-width:600px;margin-left:auto;margin-right:auto;
+  }
+  @media (max-width:880px){
+    .lineup-grid{grid-template-columns:1fr;gap:80px}
+    .lineup-shell{height:280px}
+  }
+  @media (max-width:600px){.life-photo{width:calc(100% + 64px);margin:-32px -32px 28px;height:280px}}
+
+  /* ---------- FINAL CTA ---------- */
+  .final{
+    background:linear-gradient(180deg, #0a0a0a 0%, #161618 100%);
+    color:#fff;text-align:center;
+    padding: clamp(84px, 9vw, 120px) var(--pad);
+  }
+  .final h2{color:#fff;max-width:900px;margin:0 auto;text-wrap:balance}
+  .final .lead{color:rgba(255,255,255,.75);max-width:680px;margin:24px auto 0}
+  .final .cta-row{margin-top:44px}
+  .final .eyebrow{color:#ff6b76}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:#0a0a0a;color:rgba(255,255,255,.55);
+    padding:48px var(--pad);
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .footer-inner{
+    max-width:var(--max);margin:0 auto;
+    display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+    font-size:13.5px;
+  }
+  .footer-inner a{color:rgba(255,255,255,.7)}
+  .footer-inner a:hover{color:#fff}
+  .footer-brand{color:#fff;font-weight:700;letter-spacing:-.02em}
+  .footer-brand .dot{color:var(--accent)}
+
+  /* ---------- ANIMATIONS ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  ::selection{background:var(--ink);color:#fff}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Will an iKamper work on my vehicle?", "acceptedAnswer": {"@type": "Answer", "text": "Most pickups, mid-to-large SUVs, vans, and overland-oriented platforms work well. Compact cars and some crossover bar setups don't. Send us your year and trim or bring it in — we'll give you a real answer in five minutes."}}, {"@type": "Question", "name": "Are my factory bars enough?", "acceptedAnswer": {"@type": "Answer", "text": "Sometimes, sometimes not. We check the bar type, the manufacturer's static and dynamic load ratings, and the spacing across your roof. We'll tell you honestly whether yours are up to it."}}, {"@type": "Question", "name": "Do I need new bars or a platform?", "acceptedAnswer": {"@type": "Answer", "text": "Often the bars; sometimes a platform; occasionally neither. A platform makes accessory mounting and weight distribution noticeably easier — but it isn't always required."}}, {"@type": "Question", "name": "What's static vs. dynamic load?", "acceptedAnswer": {"@type": "Answer", "text": "Static is what your roof can hold parked (tent, gear, people inside). Dynamic is what it carries while driving — much lower, usually 150–200 lbs. Both have to work for the system you want."}}, {"@type": "Question", "name": "What about a panoramic or sliding sunroof?", "acceptedAnswer": {"@type": "Answer", "text": "Tents go on bars, not glass — so a sunroof is mostly fine. We check that the bars clear the roof opening and that the tent's weight won't change how the sunroof tracks behave over time."}}, {"@type": "Question", "name": "Can it go on a pickup with a bed rack?", "acceptedAnswer": {"@type": "Answer", "text": "Excellent setup. Bed racks distribute load over the truck's frame, lift the tent above the cab, and give you a deck to work from. One of our most-recommended foundations."}}, {"@type": "Question", "name": "Will it work on a Sprinter or Transit van?", "acceptedAnswer": {"@type": "Answer", "text": "Ideal — vans and platforms were made for each other. Long roof, flat surface, plenty of capacity. Usually we're matching to an aftermarket platform you already have or planning one in."}}, {"@type": "Question", "name": "What about lifted vehicles or oversized tires?", "acceptedAnswer": {"@type": "Answer", "text": "Workable, but the math changes. A lift adds height before the tent does. We'll measure your garage, your typical parking, and the climb to the ladder before recommending anything."}}, {"@type": "Question", "name": "Will it still fit in my garage?", "acceptedAnswer": {"@type": "Answer", "text": "An iKamper adds roughly 12 inches to your roof. Measure your garage door clearance plus a small buffer for sag and snow load. Under 7 feet, we'll talk through options before you commit."}}, {"@type": "Question", "name": "How much height does it add?", "acceptedAnswer": {"@type": "Answer", "text": "About 12 inches at the highest point of the closed shell, slightly more with bars and feet. We'll give you the exact number for your specific tent and bar combination."}}, {"@type": "Question", "name": "What about parking decks and drive-thrus?", "acceptedAnswer": {"@type": "Answer", "text": "Most parking decks are 6'8\" — too low for a vehicle with a rooftop tent. Drive-thrus vary. Some customers plan their daily routes; others don't drive theirs daily. Worth thinking about up front."}}, {"@type": "Question", "name": "Can I take it through an automatic car wash?", "acceptedAnswer": {"@type": "Answer", "text": "Avoid touchless ones with overhead beams, and definitely no brush washes. Hand wash is the safe move. We can recommend wash spots in Sacramento that work."}}, {"@type": "Question", "name": "Will it whistle or hum on the freeway?", "acceptedAnswer": {"@type": "Answer", "text": "Usually no — iKamper's hardshell is quieter than most soft tents. The right bar and tower system makes the difference. Wrong bars or wrong placement is what creates whistle."}}, {"@type": "Question", "name": "How much does it affect fuel economy?", "acceptedAnswer": {"@type": "Answer", "text": "Typically 1–3 mpg on a mid-size SUV at highway speed. Hardshells like iKamper hurt mpg less than soft-shell or hybrid designs because they're aerodynamic when closed."}}, {"@type": "Question", "name": "Can Rack N Road install my iKamper?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — including ones we sell and ones customers bring in from elsewhere. Our team has installed thousands of rooftop tents. The judgment comes from doing the work, not reading the manual."}}, {"@type": "Question", "name": "How long does the install take?", "acceptedAnswer": {"@type": "Answer", "text": "2–3 hours when the bar foundation is already correct. Half a day if we're also installing crossbars, towers, or a platform. We tell you up front when you schedule."}}, {"@type": "Question", "name": "Do I drop my vehicle off or wait?", "acceptedAnswer": {"@type": "Answer", "text": "Most customers drop off in the morning and pick up the same day. Our showroom is comfortable if you'd rather wait — we'll show you what's stocked and walk you through the install as we go."}}, {"@type": "Question", "name": "Can you install a tent I bought elsewhere?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Bring the tent and the vehicle. We'll evaluate the bars or platform underneath and tell you what — if anything — needs to change before mounting."}}, {"@type": "Question", "name": "Can you install a tent that isn't iKamper?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We sell and install iKamper, Roofnest, Thule/Tepui, James Baroud, and Yakima. For other brands, bring us the tent details and your vehicle - we'll evaluate the product and make sure the bars, platform, fitment, and installation strategy underneath are solid."}}, {"@type": "Question", "name": "Can you remove and re-install for off-season storage?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Many customers do this annually. We can also sell you a wall-mount storage rack that lets you do it yourself with a friend."}}, {"@type": "Question", "name": "What if I want to install it myself?", "acceptedAnswer": {"@type": "Answer", "text": "We'll sell you the parts and walk you through the process. We won't warranty a self-install — but if you bring it in afterward and want us to look it over, we'll do that for a fee."}}, {"@type": "Question", "name": "Do I need an appointment?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, especially in spring and summer. We typically book 1–3 weeks out. The phone or text line is the fastest way to lock a slot."}}, {"@type": "Question", "name": "How fast is setup at camp?", "acceptedAnswer": {"@type": "Answer", "text": "Hardshell deploys in under a minute solo, faster with a partner. Take-down is comparable. Fastest setup in the category — which is why owners actually use it."}}, {"@type": "Question", "name": "How does it handle wind and rain?", "acceptedAnswer": {"@type": "Answer", "text": "Well, when set up correctly. Hardshell construction handles wind better than canvas. Rain depends on the rainfly being properly stretched and the tent being level. We walk through both at handover."}}, {"@type": "Question", "name": "Is it warm enough in cold weather?", "acceptedAnswer": {"@type": "Answer", "text": "With proper bedding, yes — down to about freezing. Below that you want an insulator pad, a 3-season-plus bag, and a propane heater rated for ventilated spaces if you're cold-sensitive."}}, {"@type": "Question", "name": "Can I leave bedding inside when closed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — one of the best parts of a hardshell. Bedding stays put when the tent folds. Setup at camp is unzip and climb up."}}, {"@type": "Question", "name": "What about condensation?", "acceptedAnswer": {"@type": "Answer", "text": "Some condensation is normal in any tent. iKamper's BreathWeave fabric handles it well. The bigger lever is ventilation — keep windows or vents cracked, even when it's cold."}}, {"@type": "Question", "name": "Will it leak in heavy rain?", "acceptedAnswer": {"@type": "Answer", "text": "A properly set-up iKamper handles serious weather. Most \"leaks\" we see are setup issues — rainfly not pulled taut, a window left ajar, the tent set up at an angle that pools water. We cover this at handover."}}, {"@type": "Question", "name": "How do I clean it?", "acceptedAnswer": {"@type": "Answer", "text": "Brush off debris, rinse with mild soap and water, let it dry fully before closing. Avoid harsh detergents and pressure washers. We can recommend a specific cleaner that works."}}, {"@type": "Question", "name": "What accessories should I plan for now?", "acceptedAnswer": {"@type": "Answer", "text": "First-year adds: awning, annex, lighting, storage (fuel, traction boards, recovery gear). You don't have to buy them all at once, but the install should anticipate them — otherwise you'll be redoing brackets later."}}, {"@type": "Question", "name": "Can I add an awning or annex later?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The awning system mounts to the side of the shell. The annex zips to the tent's footprint. Both are easy to add after the fact if the bars and platform were planned for it."}}, {"@type": "Question", "name": "Can I add solar or LED lighting?", "acceptedAnswer": {"@type": "Answer", "text": "Lighting is straightforward. Solar takes a bit more planning. A platform makes both easier. We'll spec wiring, switches, and battery if you want a complete system."}}, {"@type": "Question", "name": "Can I mount bikes or kayaks alongside?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes, depending on the foundation. Bed racks and platforms create deck space for additional accessories. We've run a tent, kayak, and bikes on the same Tacoma — it requires planning, but it's possible."}}, {"@type": "Question", "name": "How much does an iKamper cost?", "acceptedAnswer": {"@type": "Answer", "text": "Skycamp 4.0 currently starts at $4,250 for the Duo, $4,500 for the Trio, and $4,700 for the Quad. Mattress choice, installation, and any required bars or platform change the final total."}}, {"@type": "Question", "name": "Why buy from Rack N Road instead of online?", "acceptedAnswer": {"@type": "Answer", "text": "The tent is only part of the decision. An online order doesn't know your vehicle, your bars, or what you'll regret six months in. We do this every week. Judgment is what you're paying for."}}, {"@type": "Question", "name": "Do you offer financing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, including 0% promotional financing for qualified buyers. Ask us about current options — they change a few times a year."}}, {"@type": "Question", "name": "What's included in the install price?", "acceptedAnswer": {"@type": "Answer", "text": "The full mount, torque to spec, walk-through of deploy/stow/drive/park, and a follow-up if anything settles. Bars or platform, if needed, are quoted separately so you see exactly what you're paying for."}}, {"@type": "Question", "name": "Can I order ahead and lock in pricing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. iKamper supply has been tight at times — pre-ordering with a deposit reserves your tent and locks today's price."}}]}</script>
+</head>
+<body>
+
+<!-- CANONICAL (staged file → production slug): https://racknroad.com/store/sacramento/ikamper-rooftop-tents/ -->
+<nav aria-label="Breadcrumb" style="background:#f5f5f7;border-bottom:1px solid rgba(0,0,0,0.08);">
+  <div style="max-width:1180px;margin:0 auto;padding:10px 24px;font-size:0.8rem;color:#6e6e73;">
+    <a href="https://racknroad.com/" style="color:#6e6e73;text-decoration:none;">Rack N Road</a>
+    <span style="margin:0 6px;">&rsaquo;</span>
+    <a href="https://racknroad.com/store/sacramento/" style="color:#6e6e73;text-decoration:none;">Sacramento</a>
+    <span style="margin:0 6px;">&rsaquo;</span>
+    <span style="color:#1d1d1f;">iKamper</span>
+  </div>
+</nav>
+
+<a class="floating-contact" href="https://racknroad.com/store/sacramento/intake/" aria-label="Contact Us">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 20l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Contact Us
+</a>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">Rack<span class="dot">N</span>Road</a>
+    <div class="nav-links">
+      <a href="#install">Installation</a>
+      <a href="#lineup">Lineup</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="nav-cta" href="https://racknroad.com/store/sacramento/">Sacramento Store</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="eyebrow">iKamper Sales &amp; Installation — Sacramento</p>
+      <h1>Your iKamper Setup Starts Before the Tent Goes On.</h1>
+      <p class="lead">
+        35 years of installs in Sacramento. Bars, fitment, weight support, placement — we get the foundation right before the tent ever goes on.
+      </p>
+      <div class="cta-stack">
+        <div class="row">
+          <a class="btn btn-red btn-cta" href="https://racknroad.com/store/sacramento/intake/">Let's Get It Right the First Time <span class="arrow">→</span></a>
+          <a class="btn btn-quiet-light" href="#install">See what goes into it →</a>
+        </div>
+        <p class="cta-support on-dark"><span class="dot"></span><a href="tel:+19165637333">Call or Text Sacramento · (916) 563-7333</a></p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST BAND -->
+<section class="trust" aria-label="Why customers trust Rack N Road">
+  <div class="trust-row">
+    <div class="trust-item">
+      <svg class="trust-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Authorized iKamper Dealer</span>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-ico" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Rack+N+Road+2021+Arden+Way+Sacramento+CA" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">4.9 Stars &middot; 1,000+ Reviews</a>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>35+ Years in Business</span>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      <span>Certified Installers</span>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      <span>10,000+ Builds</span>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE WITH AN iKAMPER -->
+<section class="life" id="life">
+  <div class="container">
+    <div class="life-row">
+      <div class="reveal">
+        <p class="eyebrow">Life With an iKamper</p>
+        <h2>The tent is premium. The technical build is what makes it feel that way.</h2>
+        <p class="lead" style="margin-top:18px">An iKamper does what it says it does. The ownership experience — whether it's a joy or a chore — comes down to the things that happen around the tent.</p>
+        <div class="life-points">
+          <div class="life-point">
+            <h4>Getting in and out</h4>
+            <p>Ladder angle, ladder placement, and what you're standing on at camp. These are install decisions, not tent decisions.</p>
+          </div>
+          <div class="life-point">
+            <h4>Loading and unloading</h4>
+            <p>Where bedding, gear, and accessories live. How you stage them. Whether opening the tent is a one-person job.</p>
+          </div>
+          <div class="life-point">
+            <h4>Driving with it</h4>
+            <p>How quiet the system is on the freeway. How it changes fuel economy. How it tracks in crosswinds.</p>
+          </div>
+          <div class="life-point">
+            <h4>Parking with it</h4>
+            <p>Daily errands, work parking, the garage at home. The setup that ignores these gets traded in early.</p>
+          </div>
+          <div class="life-point">
+            <h4>Using it repeatedly over time</h4>
+            <p>The friction of every trip — that's what shows whether the install was right.</p>
+          </div>
+        </div>
+      </div>
+      <div class="life-callout reveal">
+        <img class="life-photo" src="rnr-ikamper-assets/interior.jpg" alt="Skycamp 4.0 interior with integrated lighting and panoramic sky view" loading="lazy" />
+        <blockquote>"The customers who love their iKamper aren't the ones with the prettiest setup. They're the ones whose setup got out of their way."</blockquote>
+        <cite>— Rack N Road install team</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINEUP — Skycamp 4.0 -->
+<section class="lineup" id="lineup">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">A new generation of Skycamp</p>
+      <h2>Skycamp 4.0.</h2>
+      <p class="lead">Refined design. Expanded lineup. Three sizes built to match the vehicles people actually drive.</p>
+    </div>
+
+    <div class="lineup-grid">
+      <!-- DUO -->
+      <div class="lineup-card reveal">
+        <div class="lineup-shell">
+          <img class="lineup-photo" src="rnr-ikamper-assets/duo.jpg" alt="iKamper Skycamp 4.0 Duo mounted on a pickup bed rack" loading="lazy" />
+          <!-- DUO: smallest, 80% height -->
+          <svg viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg" aria-label="Skycamp 4.0 Duo">
+            <defs>
+              <linearGradient id="duo-shell" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3a3a3d"/>
+                <stop offset=".55" stop-color="#1f1f22"/>
+                <stop offset="1" stop-color="#0d0d10"/>
+              </linearGradient>
+              <radialGradient id="duo-door" cx=".5" cy=".4" r=".7">
+                <stop offset="0" stop-color="#2c2c30"/>
+                <stop offset="1" stop-color="#0a0a0c"/>
+              </radialGradient>
+              <pattern id="duo-mesh" width="6" height="6" patternUnits="userSpaceOnUse">
+                <rect width="6" height="6" fill="transparent"/>
+                <path d="M0 3 H6 M3 0 V6" stroke="rgba(255,255,255,0.05)" stroke-width=".5"/>
+              </pattern>
+            </defs>
+            <!-- Hardshell top -->
+            <path d="M30 60 Q35 38 60 38 H160 Q185 38 190 60 L194 90 Q194 96 188 96 H32 Q26 96 26 90 Z" fill="url(#duo-shell)"/>
+            <!-- Tent body face -->
+            <path d="M40 96 L60 200 H160 L180 96 Z" fill="#1a1a1d"/>
+            <!-- Door panel with mesh + world map suggestion -->
+            <path d="M52 110 L66 192 H154 L168 110 Z" fill="url(#duo-door)"/>
+            <path d="M52 110 L66 192 H154 L168 110 Z" fill="url(#duo-mesh)"/>
+            <!-- World map shapes (abstract continents) -->
+            <g fill="rgba(255,255,255,0.07)">
+              <path d="M75 130 q5 -4 12 -2 q4 4 0 8 q-6 4 -12 2 z"/>
+              <path d="M100 138 q8 -2 14 4 q3 6 -2 10 q-7 3 -14 -2 q-4 -6 2 -12 z"/>
+              <path d="M130 158 q6 -1 10 4 q1 6 -4 9 q-7 2 -10 -4 q-2 -6 4 -9 z"/>
+              <path d="M82 168 q4 -2 8 1 q2 4 -1 7 q-5 2 -8 -1 q-3 -4 1 -7 z"/>
+            </g>
+            <!-- Zipper line (curve) -->
+            <path d="M110 110 Q108 150 110 192" stroke="rgba(255,255,255,0.18)" stroke-width=".8" fill="none"/>
+            <!-- Ladder -->
+            <line x1="100" y1="200" x2="100" y2="260" stroke="#1a1a1d" stroke-width="3"/>
+            <line x1="120" y1="200" x2="120" y2="260" stroke="#1a1a1d" stroke-width="3"/>
+            <rect x="98" y="208" width="24" height="3" fill="#e8b91a"/>
+            <rect x="98" y="222" width="24" height="3" fill="#e8b91a"/>
+            <rect x="98" y="236" width="24" height="3" fill="#e8b91a"/>
+            <rect x="98" y="250" width="24" height="3" fill="#e8b91a"/>
+            <!-- Ground shadow -->
+            <ellipse cx="110" cy="265" rx="60" ry="4" fill="rgba(0,0,0,.18)"/>
+          </svg>
+        </div>
+        <h3 class="lineup-name">Duo</h3>
+        <div class="lineup-pricing">
+          <div class="lineup-price-block">
+            <div class="price">$4,250</div>
+            <div class="price-label">Starting price</div>
+          </div>
+          <div class="lineup-price-block">
+            <div class="price">$4,495</div>
+            <div class="price-label">With 3" RTT Comfort Lite Mattress</div>
+          </div>
+        </div>
+        <div class="lineup-specs">
+          <div>
+            <div class="label">Tent + mounting brackets</div>
+            <div class="value">119 lbs</div>
+          </div>
+          <div>
+            <div class="label">Closed Dimensions</div>
+            <div class="value">61" × 52⅜" × 13¾"</div>
+          </div>
+          <div>
+            <div class="label">Sleeping Area</div>
+            <div class="value">60¼" × 82⅝" · Sleeps 1–2</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRIO -->
+      <div class="lineup-card reveal">
+        <div class="lineup-badge">New Size</div>
+        <div class="lineup-shell">
+          <img class="lineup-photo" src="rnr-ikamper-assets/trio-angle.jpg" alt="iKamper Skycamp 4.0 Trio mounted on an SUV platform" loading="lazy" />
+          <!-- TRIO: middle, 95% -->
+          <svg viewBox="0 0 260 320" xmlns="http://www.w3.org/2000/svg" aria-label="Skycamp 4.0 Trio">
+            <defs>
+              <linearGradient id="trio-shell" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3a3a3d"/>
+                <stop offset=".55" stop-color="#1f1f22"/>
+                <stop offset="1" stop-color="#0d0d10"/>
+              </linearGradient>
+              <radialGradient id="trio-door" cx=".5" cy=".4" r=".7">
+                <stop offset="0" stop-color="#2c2c30"/>
+                <stop offset="1" stop-color="#0a0a0c"/>
+              </radialGradient>
+              <pattern id="trio-mesh" width="6" height="6" patternUnits="userSpaceOnUse">
+                <rect width="6" height="6" fill="transparent"/>
+                <path d="M0 3 H6 M3 0 V6" stroke="rgba(255,255,255,0.05)" stroke-width=".5"/>
+              </pattern>
+            </defs>
+            <path d="M32 70 Q40 44 70 44 H190 Q220 44 228 70 L232 102 Q232 110 224 110 H36 Q28 110 28 102 Z" fill="url(#trio-shell)"/>
+            <path d="M44 110 L66 232 H194 L216 110 Z" fill="#1a1a1d"/>
+            <path d="M58 124 L74 224 H186 L202 124 Z" fill="url(#trio-door)"/>
+            <path d="M58 124 L74 224 H186 L202 124 Z" fill="url(#trio-mesh)"/>
+            <g fill="rgba(255,255,255,0.07)">
+              <path d="M85 148 q5 -4 12 -2 q4 4 0 8 q-6 4 -12 2 z"/>
+              <path d="M115 158 q8 -2 14 4 q3 6 -2 10 q-7 3 -14 -2 q-4 -6 2 -12 z"/>
+              <path d="M150 180 q6 -1 10 4 q1 6 -4 9 q-7 2 -10 -4 q-2 -6 4 -9 z"/>
+              <path d="M92 192 q4 -2 8 1 q2 4 -1 7 q-5 2 -8 -1 q-3 -4 1 -7 z"/>
+              <path d="M165 198 q4 -2 7 1 q2 4 -1 6 q-4 2 -7 -1 q-2 -4 1 -6 z"/>
+            </g>
+            <path d="M130 124 Q128 174 130 224" stroke="rgba(255,255,255,0.18)" stroke-width=".8" fill="none"/>
+            <line x1="118" y1="232" x2="118" y2="298" stroke="#1a1a1d" stroke-width="3"/>
+            <line x1="142" y1="232" x2="142" y2="298" stroke="#1a1a1d" stroke-width="3"/>
+            <rect x="116" y="240" width="28" height="3" fill="#e8b91a"/>
+            <rect x="116" y="255" width="28" height="3" fill="#e8b91a"/>
+            <rect x="116" y="270" width="28" height="3" fill="#e8b91a"/>
+            <rect x="116" y="285" width="28" height="3" fill="#e8b91a"/>
+            <ellipse cx="130" cy="304" rx="74" ry="5" fill="rgba(0,0,0,.18)"/>
+          </svg>
+        </div>
+        <h3 class="lineup-name">Trio</h3>
+        <div class="lineup-pricing">
+          <div class="lineup-price-block">
+            <div class="price">$4,500</div>
+            <div class="price-label">Starting price</div>
+          </div>
+          <div class="lineup-price-block">
+            <div class="price">$4,795</div>
+            <div class="price-label">With 3" RTT Comfort Lite Mattress</div>
+          </div>
+        </div>
+        <div class="lineup-specs">
+          <div>
+            <div class="label">Tent + mounting brackets</div>
+            <div class="value">132 lbs</div>
+          </div>
+          <div>
+            <div class="label">Closed Dimensions</div>
+            <div class="value">68⅛" × 52⅜" × 13¾"</div>
+          </div>
+          <div>
+            <div class="label">Sleeping Area</div>
+            <div class="value">67⅜" × 82⅝" · Sleeps 2–3</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUAD -->
+      <div class="lineup-card reveal">
+        <div class="lineup-shell">
+          <img class="lineup-photo" src="rnr-ikamper-assets/quad.jpg" alt="iKamper Skycamp 4.0 Quad mounted on a full-size SUV" loading="lazy" />
+          <!-- QUAD: largest, 110% -->
+          <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg" aria-label="Skycamp 4.0 Quad">
+            <defs>
+              <linearGradient id="quad-shell" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3a3a3d"/>
+                <stop offset=".55" stop-color="#1f1f22"/>
+                <stop offset="1" stop-color="#0d0d10"/>
+              </linearGradient>
+              <radialGradient id="quad-door" cx=".5" cy=".4" r=".7">
+                <stop offset="0" stop-color="#2c2c30"/>
+                <stop offset="1" stop-color="#0a0a0c"/>
+              </radialGradient>
+              <pattern id="quad-mesh" width="6" height="6" patternUnits="userSpaceOnUse">
+                <rect width="6" height="6" fill="transparent"/>
+                <path d="M0 3 H6 M3 0 V6" stroke="rgba(255,255,255,0.05)" stroke-width=".5"/>
+              </pattern>
+            </defs>
+            <path d="M34 78 Q44 50 78 50 H222 Q256 50 266 78 L272 116 Q272 124 263 124 H37 Q28 124 28 116 Z" fill="url(#quad-shell)"/>
+            <path d="M48 124 L72 264 H228 L252 124 Z" fill="#1a1a1d"/>
+            <path d="M64 140 L82 254 H218 L236 140 Z" fill="url(#quad-door)"/>
+            <path d="M64 140 L82 254 H218 L236 140 Z" fill="url(#quad-mesh)"/>
+            <g fill="rgba(255,255,255,0.07)">
+              <path d="M95 168 q5 -4 12 -2 q4 4 0 8 q-6 4 -12 2 z"/>
+              <path d="M130 178 q8 -2 14 4 q3 6 -2 10 q-7 3 -14 -2 q-4 -6 2 -12 z"/>
+              <path d="M175 200 q6 -1 10 4 q1 6 -4 9 q-7 2 -10 -4 q-2 -6 4 -9 z"/>
+              <path d="M105 215 q4 -2 8 1 q2 4 -1 7 q-5 2 -8 -1 q-3 -4 1 -7 z"/>
+              <path d="M195 220 q4 -2 7 1 q2 4 -1 6 q-4 2 -7 -1 q-2 -4 1 -6 z"/>
+              <path d="M150 230 q5 -2 8 2 q1 4 -3 6 q-5 1 -7 -2 q-2 -4 2 -6 z"/>
+            </g>
+            <path d="M150 140 Q148 195 150 254" stroke="rgba(255,255,255,0.18)" stroke-width=".8" fill="none"/>
+            <line x1="136" y1="264" x2="136" y2="338" stroke="#1a1a1d" stroke-width="3"/>
+            <line x1="164" y1="264" x2="164" y2="338" stroke="#1a1a1d" stroke-width="3"/>
+            <rect x="134" y="272" width="32" height="3" fill="#e8b91a"/>
+            <rect x="134" y="288" width="32" height="3" fill="#e8b91a"/>
+            <rect x="134" y="304" width="32" height="3" fill="#e8b91a"/>
+            <rect x="134" y="320" width="32" height="3" fill="#e8b91a"/>
+            <ellipse cx="150" cy="344" rx="86" ry="5" fill="rgba(0,0,0,.18)"/>
+          </svg>
+        </div>
+        <h3 class="lineup-name">Quad</h3>
+        <div class="lineup-pricing">
+          <div class="lineup-price-block">
+            <div class="price">$4,700</div>
+            <div class="price-label">Starting price</div>
+          </div>
+          <div class="lineup-price-block">
+            <div class="price">$5,095</div>
+            <div class="price-label">With 3" RTT Comfort Lite Mattress</div>
+          </div>
+        </div>
+        <div class="lineup-specs">
+          <div>
+            <div class="label">Tent + mounting brackets</div>
+            <div class="value">157 lbs</div>
+          </div>
+          <div>
+            <div class="label">Closed Dimensions</div>
+            <div class="value">85⅜" × 55⅛" × 13¾"</div>
+          </div>
+          <div>
+            <div class="label">Sleeping Area</div>
+            <div class="value">84⅝" × 83⅛" · Sleeps 3–4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lineup-cta-row reveal">
+      <div class="cta-stack center">
+        <div class="row">
+          <a class="btn btn-primary btn-cta" href="tel:+19165637333">Let's Get It Right the First Time <span class="arrow">→</span></a>
+        </div>
+        <p class="cta-support"><span class="dot"></span><a href="tel:+19165637333">Call or Text Sacramento · (916) 563-7333</a></p>
+      </div>
+    </div>
+    <p class="lineup-note">Current Rack N Road price range shown as of August 2026. Mattress choice changes the final price. Sacramento confirms vehicle fit, rack capacity, availability, and installation before purchase.</p>
+  </div>
+</section>
+
+<!-- FOUNDATION — Vehicle & Setup -->
+<section class="compat" id="install">
+  <div class="container">
+    <div class="compat-row">
+      <div class="reveal">
+        <div class="compat-eyebrow-rule">
+          <p class="eyebrow">Vehicle &amp; System Foundation</p>
+        </div>
+        <h2>What sits under the tent matters as much as the tent itself.</h2>
+        <p class="lead">A premium rooftop tent is only as good as the foundation underneath it. Most of the things that decide whether the system feels right at year three are decided before the tent ever goes on the vehicle.</p>
+        <div class="compat-bullets">
+          <div class="compat-bullet">
+            <div class="check"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></div>
+            <div>
+              <h4>Roof load — static is the easy number, dynamic is the real one</h4>
+              <p>Your roof can hold the tent at rest. The question is what it carries on the freeway with crosswinds, and what it supports with two adults and gear up top at camp.</p>
+            </div>
+          </div>
+          <div class="compat-bullet">
+            <div class="check"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></div>
+            <div>
+              <h4>Crossbar compatibility — bars, towers, and feet</h4>
+              <p>Not every crossbar is rated for a hardshell. Spacing, bar shape, and tower mounting all change the answer. Wrong bars under a great tent is a slow, expensive problem.</p>
+            </div>
+          </div>
+          <div class="compat-bullet">
+            <div class="check"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></div>
+            <div>
+              <h4>Hatch clearance and ladder angle</h4>
+              <p>Six inches forward, your tailgate opens. Six inches back, it doesn't. The same decision dictates whether your ladder lands on level ground at most campsites, or on a slope every time.</p>
+            </div>
+          </div>
+          <div class="compat-bullet">
+            <div class="check"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></div>
+            <div>
+              <h4>Daily-driver reality</h4>
+              <p>An iKamper adds about a foot to your roofline. Drive-thrus, parking decks, and whether the tent fits in your own garage at home — those are install decisions, not tent decisions.</p>
+            </div>
+          </div>
+          <div class="compat-bullet">
+            <div class="check"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></div>
+            <div>
+              <h4>Long-term usability — living with the system</h4>
+              <p>Installation isn't only about today. It's about how the tent feels to load, deploy, drive with, and use repeatedly two and three years from now.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cta-stack" style="margin-top:36px">
+          <div class="row">
+            <a class="btn btn-primary btn-cta" href="tel:+19165637333">Let's Get It Right the First Time <span class="arrow">→</span></a>
+          </div>
+          <p class="cta-support"><span class="dot"></span><a href="tel:+19165637333">Call or Text Sacramento · (916) 563-7333</a></p>
+        </div>
+      </div>
+
+      <div class="compat-card reveal">
+        <div class="compat-card-head">
+          <h3>Foundation, by vehicle type</h3>
+          <span class="small">At a glance</span>
+        </div>
+        <ul class="compat-list">
+          <li><span class="vehicle">Mid-size pickup with bed rack</span><span class="badge yes">Excellent</span></li>
+          <li><span class="vehicle">Mid-size pickup, cab roof only</span><span class="badge maybe">Depends on bars</span></li>
+          <li><span class="vehicle">SUV with strong factory bars</span><span class="badge yes">Often great</span></li>
+          <li><span class="vehicle">SUV with decorative bars</span><span class="badge no">Upgrade required</span></li>
+          <li><span class="vehicle">Wagon / crossover, factory rails</span><span class="badge maybe">Plan carefully</span></li>
+          <li><span class="vehicle">Sprinter / Transit, with platform</span><span class="badge yes">Ideal</span></li>
+          <li><span class="vehicle">4Runner / Wrangler, aftermarket platform</span><span class="badge yes">Excellent</span></li>
+          <li><span class="vehicle">Compact car</span><span class="badge no">Not recommended</span></li>
+        </ul>
+        <div class="compat-card-foot">
+          <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Real fitment depends on your specific year, trim, and accessories. We confirm compatibility, load ratings, and clearance before you commit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STANDARD — What we stand behind -->
+<section class="standard" id="standard">
+  <div class="container">
+    <div class="standard-row">
+      <div class="reveal">
+        <p class="eyebrow">Selective by Design</p>
+        <h2>A great tent still needs the right foundation.</h2>
+        <p class="lead">There are more rooftop tents on the market than ever. Some are thoughtfully built. Some are not. From a distance, many look the part. Real life is where the difference shows up.</p>
+
+        <div class="standard-callout">
+          <p class="standard-callout-lead">We sell and install the rooftop-tent brands we trust.</p>
+          <p class="standard-callout-tail">Then we match each one to the right vehicle foundation.</p>
+        </div>
+
+        <div class="standard-body">
+          <p>We sell and install iKamper, Roofnest, Thule/Tepui, James Baroud, and Yakima rooftop tents. Each brand has different strengths, footprints, weights, and vehicle requirements. We help customers choose the one that fits how they camp and what they drive.</p>
+          <p>If you're already committed to another tent, bring it to us. In many cases we can still help by building the right foundation underneath: the bars, platform, fitment, weight support, placement, and installation strategy that make the system secure and far more usable in the real world.</p>
+          <p>The tent gets the attention. The foundation determines whether the story ends well. What matters is what holds steady at highway speed, what clears your hatch, what fits your garage, what carries the weight correctly, and what still feels like a smart decision a year from now.</p>
+        </div>
+
+        <p class="standard-closing">Bring us the tent you believe in. We'll tell you honestly whether the foundation under it is smart enough to trust.</p>
+
+        <div class="cta-stack" style="margin-top:28px">
+          <div class="row">
+            <a class="btn btn-primary btn-cta" href="tel:+19165637333">Let's Get It Right the First Time <span class="arrow">→</span></a>
+          </div>
+          <p class="cta-support"><span class="dot"></span><a href="tel:+19165637333">Call or Text Sacramento · (916) 563-7333</a></p>
+        </div>
+      </div>
+
+      <div class="standard-card reveal">
+        <div class="standard-card-head">
+          <h3>How we work with each tent</h3>
+          <span class="small">At a glance</span>
+        </div>
+        <ul class="standard-list">
+          <li>
+            <span class="brand">iKamper</span>
+            <span class="what featured">Stock, sell &amp; install</span>
+          </li>
+          <li>
+            <span class="brand">Roofnest</span>
+            <span class="what sold">Sell &amp; install</span>
+          </li>
+          <li>
+            <span class="brand">Thule / Tepui</span>
+            <span class="what sold">Sell &amp; install</span>
+          </li>
+          <li>
+            <span class="brand">Yakima</span>
+            <span class="what sold">Sell &amp; install</span>
+          </li>
+          <li>
+            <span class="brand">James Baroud</span>
+            <span class="what sold">Sell &amp; install</span>
+          </li>
+          <li>
+            <span class="brand">CVT</span>
+            <span class="what">Foundation only</span>
+          </li>
+          <li>
+            <span class="brand">Other brand or DIY build</span>
+            <span class="what evaluate">Let's evaluate</span>
+          </li>
+        </ul>
+        <div class="standard-card-foot">
+          <strong style="color:var(--ink);font-weight:600">Foundation only</strong> means we build the bars, platform, fitment, and install strategy under any tent you bring us. The tent itself stays yours — we make sure what's under it is worth trusting.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON MISTAKES -->
+<section id="mistakes">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Common Mistakes</p>
+      <h2>The decisions people regret six months in.</h2>
+      <p class="lead">None of these are catastrophic on their own. But they each take a little off the ownership experience — and the tent costs too much for that.</p>
+    </div>
+    <div class="mistakes-grid">
+      <div class="mistake reveal">
+        <div class="mistake-num">Mistake 01</div>
+        <h3>Buying the tent before thinking through the rack system</h3>
+        <p>The tent shows up. The bars don't fit it. Now you're either driving without a tent or paying twice for a foundation you should have planned in week one.</p>
+      </div>
+      <div class="mistake reveal">
+        <div class="mistake-num">Mistake 02</div>
+        <h3>Underestimating total weight</h3>
+        <p>Tent plus mattress plus bedding plus people. The tent's spec weight is one number; the system you actually deploy at camp is another.</p>
+      </div>
+      <div class="mistake reveal">
+        <div class="mistake-num">Mistake 03</div>
+        <h3>Assuming factory bars are enough</h3>
+        <p>Some are. Many aren't. Almost no one makes this judgment well from a manufacturer's website alone.</p>
+      </div>
+      <div class="mistake reveal">
+        <div class="mistake-num">Mistake 04</div>
+        <h3>Ignoring garage clearance</h3>
+        <p>An iKamper roughly adds a foot to your roof. Measure your garage door before you commit, not after.</p>
+      </div>
+      <div class="mistake reveal">
+        <div class="mistake-num">Mistake 05</div>
+        <h3>Forgetting daily vehicle height</h3>
+        <p>Drive-thrus, parking structures, the auto-height-clearance bars at the office. The tent lives on your vehicle every day, not just on trips.</p>
+      </div>
+      <div class="mistake reveal">
+        <div class="mistake-num">Mistake 06</div>
+        <h3>Choosing for appearance instead of long-term usability</h3>
+        <p>The look matters — but only the people who don't own one yet weight it that heavily. Owners weigh how it feels to live with.</p>
+      </div>
+      <div class="mistake reveal">
+        <div class="mistake-num">Mistake 07</div>
+        <h3>Not planning for accessories</h3>
+        <p>Awning, annex, lights, storage. Most people add at least two within a year. The system should be ready for that on day one.</p>
+      </div>
+      <div class="mistake reveal">
+        <div class="mistake-num">Mistake 08</div>
+        <h3>Not asking how it'll feel two years in</h3>
+        <p>What's it like to load? Deploy? Park with? Use repeatedly? The answer shouldn't be "we'll figure it out."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Frequently Asked</p>
+      <h2>Real questions from real customers.</h2>
+      <p class="lead">Most of what people want to know — answered straight, without the marketing layer.</p>
+    </div>
+
+    <div class="faq-cats">
+
+      <!-- VEHICLE & FIT -->
+      <div class="faq-cat reveal">
+        <h3 class="faq-cat-title"><span>Vehicle &amp; Fit</span><span class="count">8 questions</span></h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-summary">Will an iKamper work on my vehicle?</div>
+            <div class="faq-body">Most pickups, mid-to-large SUVs, vans, and overland-oriented platforms work well. Compact cars and some crossover bar setups don't. Send us your year and trim or bring it in — we'll give you a real answer in five minutes.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Are my factory bars enough?</div>
+            <div class="faq-body">Sometimes, sometimes not. We check the bar type, the manufacturer's static and dynamic load ratings, and the spacing across your roof. We'll tell you honestly whether yours are up to it.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Do I need new bars or a platform?</div>
+            <div class="faq-body">Often the bars; sometimes a platform; occasionally neither. A platform makes accessory mounting and weight distribution noticeably easier — but it isn't always required.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">What's static vs. dynamic load?</div>
+            <div class="faq-body">Static is what your roof can hold parked (tent, gear, people inside). Dynamic is what it carries while driving — much lower, usually 150–200 lbs. Both have to work for the system you want.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">What about a panoramic or sliding sunroof?</div>
+            <div class="faq-body">Tents go on bars, not glass — so a sunroof is mostly fine. We check that the bars clear the roof opening and that the tent's weight won't change how the sunroof tracks behave over time.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can it go on a pickup with a bed rack?</div>
+            <div class="faq-body">Excellent setup. Bed racks distribute load over the truck's frame, lift the tent above the cab, and give you a deck to work from. One of our most-recommended foundations.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Will it work on a Sprinter or Transit van?</div>
+            <div class="faq-body">Ideal — vans and platforms were made for each other. Long roof, flat surface, plenty of capacity. Usually we're matching to an aftermarket platform you already have or planning one in.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">What about lifted vehicles or oversized tires?</div>
+            <div class="faq-body">Workable, but the math changes. A lift adds height before the tent does. We'll measure your garage, your typical parking, and the climb to the ladder before recommending anything.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIZING & CLEARANCE -->
+      <div class="faq-cat reveal">
+        <h3 class="faq-cat-title"><span>Sizing &amp; Clearance</span><span class="count">6 questions</span></h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-summary">Will it still fit in my garage?</div>
+            <div class="faq-body">An iKamper adds roughly 12 inches to your roof. Measure your garage door clearance plus a small buffer for sag and snow load. Under 7 feet, we'll talk through options before you commit.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">How much height does it add?</div>
+            <div class="faq-body">About 12 inches at the highest point of the closed shell, slightly more with bars and feet. We'll give you the exact number for your specific tent and bar combination.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">What about parking decks and drive-thrus?</div>
+            <div class="faq-body">Most parking decks are 6'8" — too low for a vehicle with a rooftop tent. Drive-thrus vary. Some customers plan their daily routes; others don't drive theirs daily. Worth thinking about up front.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can I take it through an automatic car wash?</div>
+            <div class="faq-body">Avoid touchless ones with overhead beams, and definitely no brush washes. Hand wash is the safe move. We can recommend wash spots in Sacramento that work.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Will it whistle or hum on the freeway?</div>
+            <div class="faq-body">Usually no — iKamper's hardshell is quieter than most soft tents. The right bar and tower system makes the difference. Wrong bars or wrong placement is what creates whistle.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">How much does it affect fuel economy?</div>
+            <div class="faq-body">Typically 1–3 mpg on a mid-size SUV at highway speed. Hardshells like iKamper hurt mpg less than soft-shell or hybrid designs because they're aerodynamic when closed.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTALLATION -->
+      <div class="faq-cat reveal">
+        <h3 class="faq-cat-title"><span>Installation</span><span class="count">8 questions</span></h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-summary">Can Rack N Road install my iKamper?</div>
+            <div class="faq-body">Yes — including ones we sell and ones customers bring in from elsewhere. Our team has installed thousands of rooftop tents. The judgment comes from doing the work, not reading the manual.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">How long does the install take?</div>
+            <div class="faq-body">2–3 hours when the bar foundation is already correct. Half a day if we're also installing crossbars, towers, or a platform. We tell you up front when you schedule.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Do I drop my vehicle off or wait?</div>
+            <div class="faq-body">Most customers drop off in the morning and pick up the same day. Our showroom is comfortable if you'd rather wait — we'll show you what's stocked and walk you through the install as we go.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can you install a tent I bought elsewhere?</div>
+            <div class="faq-body">Yes. Bring the tent and the vehicle. We'll evaluate the bars or platform underneath and tell you what — if anything — needs to change before mounting.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can you install a tent that isn't iKamper?</div>
+            <div class="faq-body">Yes. We sell and install iKamper, Roofnest, Thule/Tepui, James Baroud, and Yakima. For other brands, bring us the tent details and your vehicle—we'll evaluate the product and make sure the bars, platform, fitment, and installation strategy underneath are solid.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can you remove and re-install for off-season storage?</div>
+            <div class="faq-body">Yes. Many customers do this annually. We can also sell you a wall-mount storage rack that lets you do it yourself with a friend.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">What if I want to install it myself?</div>
+            <div class="faq-body">We'll sell you the parts and walk you through the process. We won't warranty a self-install — but if you bring it in afterward and want us to look it over, we'll do that for a fee.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Do I need an appointment?</div>
+            <div class="faq-body">Yes, especially in spring and summer. We typically book 1–3 weeks out. The phone or text line is the fastest way to lock a slot.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIVING WITH IT -->
+      <div class="faq-cat reveal">
+        <h3 class="faq-cat-title"><span>Living With It</span><span class="count">7 questions</span></h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-summary">How fast is setup at camp?</div>
+            <div class="faq-body">Hardshell deploys in under a minute solo, faster with a partner. Take-down is comparable. Fastest setup in the category — which is why owners actually use it.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">How does it handle wind and rain?</div>
+            <div class="faq-body">Well, when set up correctly. Hardshell construction handles wind better than canvas. Rain depends on the rainfly being properly stretched and the tent being level. We walk through both at handover.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Is it warm enough in cold weather?</div>
+            <div class="faq-body">With proper bedding, yes — down to about freezing. Below that you want an insulator pad, a 3-season-plus bag, and a propane heater rated for ventilated spaces if you're cold-sensitive.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can I leave bedding inside when closed?</div>
+            <div class="faq-body">Yes — one of the best parts of a hardshell. Bedding stays put when the tent folds. Setup at camp is unzip and climb up.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">What about condensation?</div>
+            <div class="faq-body">Some condensation is normal in any tent. iKamper's BreathWeave fabric handles it well. The bigger lever is ventilation — keep windows or vents cracked, even when it's cold.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Will it leak in heavy rain?</div>
+            <div class="faq-body">A properly set-up iKamper handles serious weather. Most "leaks" we see are setup issues — rainfly not pulled taut, a window left ajar, the tent set up at an angle that pools water. We cover this at handover.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">How do I clean it?</div>
+            <div class="faq-body">Brush off debris, rinse with mild soap and water, let it dry fully before closing. Avoid harsh detergents and pressure washers. We can recommend a specific cleaner that works.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCESSORIES -->
+      <div class="faq-cat reveal">
+        <h3 class="faq-cat-title"><span>Accessories &amp; Add-ons</span><span class="count">4 questions</span></h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-summary">What accessories should I plan for now?</div>
+            <div class="faq-body">First-year adds: awning, annex, lighting, storage (fuel, traction boards, recovery gear). You don't have to buy them all at once, but the install should anticipate them — otherwise you'll be redoing brackets later.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can I add an awning or annex later?</div>
+            <div class="faq-body">Yes. The awning system mounts to the side of the shell. The annex zips to the tent's footprint. Both are easy to add after the fact if the bars and platform were planned for it.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can I add solar or LED lighting?</div>
+            <div class="faq-body">Lighting is straightforward. Solar takes a bit more planning. A platform makes both easier. We'll spec wiring, switches, and battery if you want a complete system.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can I mount bikes or kayaks alongside?</div>
+            <div class="faq-body">Often yes, depending on the foundation. Bed racks and platforms create deck space for additional accessories. We've run a tent, kayak, and bikes on the same Tacoma — it requires planning, but it's possible.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICING & BUYING -->
+      <div class="faq-cat reveal">
+        <h3 class="faq-cat-title"><span>Pricing &amp; Buying</span><span class="count">5 questions</span></h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-summary">How much does an iKamper cost?</div>
+            <div class="faq-body">Skycamp 4.0 currently starts at $4,250 for the Duo, $4,500 for the Trio, and $4,700 for the Quad. Mattress choice, installation, and any required bars or platform change the final total.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Why buy from Rack N Road instead of online?</div>
+            <div class="faq-body">The tent is only part of the decision. An online order doesn't know your vehicle, your bars, or what you'll regret six months in. We do this every week. Judgment is what you're paying for.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Do you offer financing?</div>
+            <div class="faq-body">Yes, including 0% promotional financing for qualified buyers. Ask us about current options — they change a few times a year.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">What's included in the install price?</div>
+            <div class="faq-body">The full mount, torque to spec, walk-through of deploy/stow/drive/park, and a follow-up if anything settles. Bars or platform, if needed, are quoted separately so you see exactly what you're paying for.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-summary">Can I order ahead and lock in pricing?</div>
+            <div class="faq-body">Yes. iKamper supply has been tight at times — pre-ordering with a deposit reserves your tent and locks today's price.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="final">
+  <p class="eyebrow">Ready When You Are</p>
+  <h2>Your iKamper Setup<br/>Starts Before the Tent Goes On.</h2>
+  <p class="lead">Because the best rooftop tent experience depends on more than the tent itself. Let Rack N Road help you get the bars, fitment, weight support, and installation right from day one.</p>
+  <div class="cta-stack center" style="margin-top:44px">
+    <div class="row">
+      <a class="btn btn-red btn-cta" href="https://racknroad.com/store/sacramento/intake/">Let's Get It Right the First Time <span class="arrow">→</span></a>
+    </div>
+    <p class="cta-support on-dark"><span class="dot"></span><a href="tel:+19165637333">Call or Text Sacramento · (916) 563-7333</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Rack<span class="dot">N</span>Road</div>
+    <div>2021 Arden Way, Sacramento, CA 95825 &middot; Mon&ndash;Sat 9am&ndash;5pm, Sun Closed &middot; <a href="tel:+19165637333" style="color:inherit;text-decoration:underline;">(916) 563-7333</a></div>
+    <div style="max-width:640px;margin:6px auto 0;font-size:12.5px;color:var(--muted);line-height:1.6;">Also serving Citrus Heights, Roseville, Rocklin, Lincoln, Granite Bay, Orangevale, Fair Oaks, Folsom, El Dorado Hills, Elk Grove, Davis, Auburn and Placerville.</div>
+    <div>© Rack N Road. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Reveal-on-scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Subtle hero parallax (no library)
+  const heroBg = document.querySelector('.hero-bg');
+  if (heroBg && matchMedia('(min-width: 760px)').matches) {
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const y = Math.min(window.scrollY, 700) * 0.22;
+        heroBg.style.transform = `translate3d(0, ${y}px, 0) scale(1.05)`;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+
+</script>
+</body>
+</html>

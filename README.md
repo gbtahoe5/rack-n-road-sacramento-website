@@ -5,6 +5,7 @@ Private master repository for the Sacramento store page, category/subpages, and 
 ## Repository structure
 
 - `site/` — complete August 14, 2026 Netlify deployment export, preserved exactly as received.
+- `production/` — normalized, deployable site assembled from the latest verified files.
 - `overrides/store-hero-2026-08-14/` — later rotating-store-hero package created after the main deployment export.
 - `overrides/netlify-live-2026-08-15/` — files from the current live store deployment that differ from the August 14 export.
 - `assets/latest-2026-08-15/` — newest store-page creative assets produced after the Netlify export.
@@ -14,6 +15,10 @@ Private master repository for the Sacramento store page, category/subpages, and 
 ## Current source-of-truth rule
 
 GitHub is the master record. Netlify should publish from this repository after the deployable root is reviewed and normalized. Do not edit production files only in Netlify.
+
+The deployable root is now `production/`. Netlify is configured through the repository-root `netlify.toml`; no build command is required.
+
+Run `node scripts/audit-production.mjs` before publishing. The production pages keep their required visual assets in the repository, including snapshots of images that were previously loaded from Rack N Road or vendor CDNs.
 
 ## Known status
 
