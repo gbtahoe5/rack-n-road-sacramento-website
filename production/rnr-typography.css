@@ -1,0 +1,70 @@
+/* Rack N Road Sacramento — shared responsive type scale
+   Cargo Boxes, E-Bike Racks and iKamper established the reference hierarchy. */
+:root {
+  --rnr-type-hero-home: clamp(2.75rem, 5vw, 4.1rem);
+  --rnr-type-hero-page: clamp(2.25rem, 4.5vw, 3.25rem);
+  --rnr-type-hero-lead: clamp(1rem, 1.5vw, 1.15rem);
+  --rnr-type-section-title: clamp(1.7rem, 3.2vw, 2.4rem);
+  --rnr-type-card-title: clamp(1.15rem, 2vw, 1.5rem);
+  --rnr-type-body: clamp(0.96rem, 1.1vw, 1.04rem);
+  --rnr-type-label: 0.72rem;
+}
+
+/* Standard category/subpage heroes. !important intentionally normalizes
+   legacy rules and one-off inline declarations in the recovered pages. */
+.hero h1,
+.rnr-hero-copy h1 {
+  font-size: var(--rnr-type-hero-page) !important;
+  font-weight: 800 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.03em !important;
+  text-wrap: balance;
+}
+
+.hero .subtitle,
+.hero .hero-subtitle,
+.hero p.subtitle,
+.rnr-hero-copy p {
+  font-size: var(--rnr-type-hero-lead) !important;
+  line-height: 1.55 !important;
+}
+
+/* Homepage gets one deliberate step up, not an entirely different system. */
+.campaign-hero-primary {
+  font-size: var(--rnr-type-hero-home) !important;
+  line-height: 1.01 !important;
+  letter-spacing: -0.04em !important;
+  text-wrap: balance;
+}
+
+.campaign-lede {
+  font-size: var(--rnr-type-hero-lead) !important;
+}
+
+/* The editorial opening on What We Stand For functions as its hero. */
+.first-section .section-head > h1,
+#start-here .section-head > h1 {
+  font-size: var(--rnr-type-hero-page) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em !important;
+  text-wrap: balance;
+  margin: 0 0 18px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --rnr-type-hero-home: clamp(2.45rem, 10.5vw, 3.15rem);
+    --rnr-type-hero-page: clamp(2.1rem, 9vw, 2.65rem);
+  }
+
+  .hero h1,
+  .rnr-hero-copy h1,
+  .campaign-hero-primary,
+  .first-section .section-head > h1,
+  #start-here .section-head > h1 {
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+}
