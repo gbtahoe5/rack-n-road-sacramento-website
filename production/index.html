@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moving Sale 10–70% Off | Rack N Road Sacramento | Trailer Hitch &amp; Rack Installation Experts</title>
-  <meta name="description" content="Moving Sale — 10–70% off thousands of products through September 30 at 2021 Arden Way. New Citrus Heights location opens October 1. Rack N Road Sacramento — #1 trailer hitch installation shop. Expert hitch, roof rack, tonneau cover, and vehicle outfitting services. Curt, Stealth Hitches, Yakima, Thule, DECKED authorized. 35+ years, 4.9★ rated. 2021 Arden Way, Sacramento CA.">
+  <title>Rack N Road Sacramento | Roof Rack, Bike Rack &amp; Trailer Hitch Installation</title>
+  <link rel="stylesheet" href="rnr-typography.css">
+  <meta name="description" content="Sacramento roof rack, bike rack, cargo box and trailer hitch experts since 1991. Professional vehicle fitment and installation, plus a moving sale at 2021 Arden Way before our Citrus Heights store opens October 1.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -150,13 +151,56 @@
       .brand-badge { font-size: 0.7rem; padding: 6px 14px; }
     }
 
-    /* ROTATING MOVING-SALE HERO */
-    .hero-rotator-stage { position: relative; width: 100%; aspect-ratio: 1536 / 445; overflow: hidden; background:#000; }
-    .hero-rotator-slide { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; opacity:0; animation:rnrHeroCrossfade 12s infinite ease-in-out; }
-    .hero-rotator-slide-a { animation-delay:0s; }
-    .hero-rotator-slide-b { animation-delay:6s; }
-    @keyframes rnrHeroCrossfade { 0%, 42% { opacity:1; } 50%, 92% { opacity:0; } 100% { opacity:1; } }
-    @media (prefers-reduced-motion: reduce) { .hero-rotator-slide { animation:none; opacity:0; } .hero-rotator-slide-a { opacity:1; } }
+    /* EVERGREEN EXPERTISE HERO + TEMPORARY MOVING-SALE CALLOUT */
+    .campaign-hero { position:relative; min-height:620px; overflow:hidden; background:#111; color:#fff; display:flex; align-items:center; padding:72px 24px; }
+    .campaign-hero-media, .campaign-hero-shade { position:absolute; inset:0; }
+    .campaign-hero-media { z-index:0; background:#111; }
+    .campaign-hero-slide { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; animation:rnrHeroCrossfade 15s infinite ease-in-out; }
+    .campaign-hero-slide:nth-child(1) { animation-delay:0s; }
+    .campaign-hero-slide:nth-child(2) { animation-delay:5s; }
+    .campaign-hero-slide:nth-child(3) { animation-delay:10s; }
+    @keyframes rnrHeroCrossfade { 0%, 27% { opacity:1; } 34%, 93% { opacity:0; } 100% { opacity:1; } }
+    .campaign-hero-shade { z-index:1; background:linear-gradient(90deg,rgba(8,10,13,.94) 0%,rgba(8,10,13,.78) 38%,rgba(8,10,13,.34) 68%,rgba(8,10,13,.48) 100%); }
+    .campaign-hero-inner { position:relative; z-index:2; width:100%; max-width:1200px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1fr) 330px; align-items:center; gap:64px; }
+    .campaign-hero-copy { max-width:720px; }
+    .campaign-eyebrow { font-size:.72rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; color:#fff; margin-bottom:18px; }
+    .campaign-eyebrow::before { content:""; display:inline-block; width:38px; height:3px; margin:0 12px 3px 0; border-radius:2px; background:#d61f26; }
+    .campaign-hero h1 { max-width:800px; margin:0 0 22px; color:#fff; text-wrap:balance; }
+    .campaign-hero-primary { display:block; font-size:clamp(3rem,5.8vw,5.3rem); font-weight:800; line-height:.96; letter-spacing:-.05em; }
+    .campaign-hero-since { display:block; margin-top:14px; font-size:clamp(.8rem,1.2vw,1rem); font-weight:800; line-height:1; letter-spacing:.17em; text-transform:uppercase; color:#ff4038; }
+    .campaign-lede { max-width:680px; margin:0 0 30px; font-size:clamp(1rem,1.6vw,1.2rem); line-height:1.6; color:rgba(255,255,255,.86); }
+    .campaign-actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .campaign-actions .btn-primary, .campaign-actions .btn-secondary { justify-content:center; }
+    .move-sale-card { align-self:center; padding:28px; border-top:5px solid #d61f26; border-radius:16px; background:rgba(255,255,255,.96); color:#1d1d1f; box-shadow:0 20px 54px rgba(0,0,0,.3); backdrop-filter:blur(12px); }
+    .move-sale-kicker { font-size:.68rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:#d61f26; margin-bottom:8px; }
+    .move-sale-card h2 { font-size:clamp(1.55rem,2.3vw,2rem); line-height:1.05; letter-spacing:-.03em; margin-bottom:12px; }
+    .move-sale-card h2 span { display:block; color:#d61f26; }
+    .move-sale-card p { color:#55565b; font-size:.88rem; line-height:1.5; }
+    .move-sale-card .move-sale-opening { margin-top:16px; padding-top:16px; border-top:1px solid #d2d2d7; color:#1d1d1f; font-weight:700; }
+    .move-location-strip { position:relative; z-index:3; padding:18px 24px; background:#fff; border-bottom:1px solid #d2d2d7; }
+    .move-location-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:26px; }
+    .move-location-item { display:flex; align-items:center; gap:14px; min-width:0; }
+    .move-location-item:last-child { justify-content:flex-end; }
+    .move-location-label { font-size:.65rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:#d61f26; white-space:nowrap; }
+    .move-location-address { font-size:.86rem; font-weight:650; color:#1d1d1f; }
+    .move-location-arrow { color:#86868b; font-size:1.35rem; }
+    @media (max-width:900px) {
+      .campaign-hero { min-height:680px; padding:58px 24px; }
+      .campaign-hero-inner { grid-template-columns:1fr; gap:34px; }
+      .move-sale-card { max-width:520px; }
+      .campaign-hero-shade { background:linear-gradient(90deg,rgba(8,10,13,.92),rgba(8,10,13,.52)); }
+    }
+    @media (max-width:640px) {
+      .campaign-hero { min-height:auto; padding:48px 20px; }
+      .campaign-hero-primary { font-size:clamp(2.5rem,12vw,3.7rem); }
+      .campaign-actions { flex-direction:column; align-items:stretch; }
+      .move-sale-card { padding:22px; }
+      .move-location-inner { grid-template-columns:1fr; gap:12px; }
+      .move-location-item, .move-location-item:last-child { justify-content:flex-start; align-items:flex-start; }
+      .move-location-arrow { display:none; }
+      .move-location-label { min-width:82px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .campaign-hero-slide { animation:none; opacity:0; } .campaign-hero-slide:first-child { opacity:1; } }
 
     /* HERO ART — framed on white (desktop de-blackening); card treatment, fold-friendly cap */
     .hero-art { width: 100%; max-width: none; height: auto; margin: 0; display: block; border-radius: 0; box-shadow: none; }
@@ -243,15 +287,43 @@
     Contact Us
   </a>
 
-  <!-- MOVING SALE ROTATING HERO — temporary through the move.
-       POST-MOVE: remove this hero block and restore the evergreen hero from git history. -->
-  <div class="hero hero-rotator" role="banner" aria-label="Rack N Road Sacramento moving sale and October 1 relocation" style="padding:0;min-height:0;background:#ffffff;display:block;width:100%;">
-    <div class="hero-rotator-stage">
-      <img src="hero-rotating-shop.jpg" alt="Rack N Road Sacramento moving sale at 2021 Arden Way, with the new Citrus Heights location at 7812 Auburn Blvd. opening October 1." class="hero-rotator-slide hero-rotator-slide-a" width="1536" height="445" fetchpriority="high">
-      <img src="hero-rotating-overland.jpg" alt="Rack N Road Sacramento vehicle outfitting and moving sale featuring overland vehicles, 10 to 70 percent off, and the October 1 move to Citrus Heights." class="hero-rotator-slide hero-rotator-slide-b" width="1536" height="445">
+  <header class="campaign-hero" aria-label="Rack N Road Sacramento vehicle outfitting and installation">
+    <div class="campaign-hero-media" aria-hidden="true">
+      <img src="hero-installation-shop.jpg" alt="" class="campaign-hero-slide" width="1400" height="768" fetchpriority="high">
+      <img src="hero-installation-cargo.jpg" alt="" class="campaign-hero-slide" width="1200" height="675">
+      <img src="hero-truck-outfitting-smartcap-decked.jpg" alt="" class="campaign-hero-slide" width="1408" height="768">
     </div>
-    <div style="max-width:1080px;margin:0 auto;padding:18px 20px 30px;text-align:center;">
-      <h1 style="font-size:clamp(1rem,1.9vw,1.25rem);font-weight:700;letter-spacing:-0.015em;color:#1d1d1f;line-height:1.35;">New Citrus Heights location opens <span style="color:#d61f26;">October 1st</span></h1>
+    <div class="campaign-hero-shade" aria-hidden="true"></div>
+    <div class="campaign-hero-inner">
+      <div class="campaign-hero-copy">
+        <p class="campaign-eyebrow">Professional fitment and installation in Sacramento</p>
+        <h1><span class="campaign-hero-primary">Sacramento's Rack, Hitch &amp; Vehicle Outfitting Experts</span><span class="campaign-hero-since">Since 1991</span></h1>
+        <p class="campaign-lede">Bike racks, roof racks, cargo boxes, trailer hitches and truck accessories—matched to your vehicle and professionally installed.</p>
+        <div class="campaign-actions">
+          <a href="https://racknroad.com/store/sacramento/intake/" class="btn-primary">Plan Your Vehicle Setup</a>
+          <a href="tel:+19165637333" class="btn-secondary">Call (916) 563-7333</a>
+        </div>
+      </div>
+      <aside class="move-sale-card" aria-label="Moving sale and new location announcement">
+        <div class="move-sale-kicker">We're Moving</div>
+        <h2>Moving Sale <span>10–70% Off</span></h2>
+        <p>In-stock inventory only through September 30. Discounts vary by product while supplies last.</p>
+        <p class="move-sale-opening">New Citrus Heights store opens October 1.</p>
+      </aside>
+    </div>
+  </header>
+
+  <div class="move-location-strip" aria-label="Current and future store locations">
+    <div class="move-location-inner">
+      <a class="move-location-item" href="https://www.google.com/maps/search/?api=1&amp;query=Rack+N+Road+2021+Arden+Way+Sacramento+CA" target="_blank" rel="noopener">
+        <span class="move-location-label">Now</span>
+        <span class="move-location-address">2021 Arden Way — moving sale underway</span>
+      </a>
+      <span class="move-location-arrow" aria-hidden="true">→</span>
+      <a class="move-location-item" href="https://www.google.com/maps/search/?api=1&amp;query=7812+Auburn+Blvd+Citrus+Heights+CA+95610" target="_blank" rel="noopener">
+        <span class="move-location-label">October 1</span>
+        <span class="move-location-address">7812 Auburn Blvd., Citrus Heights</span>
+      </a>
     </div>
   </div>
 
