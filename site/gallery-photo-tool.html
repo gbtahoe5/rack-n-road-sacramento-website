@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Gallery Photo Tool — Rack N Road (internal)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 91.2%; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f5f7; color: #1d1d1f; min-height: 100vh; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.01em; }
+  .sub { color: #6e6e73; font-size: 0.9rem; margin: 6px 0 28px; }
+  .panel { background: #fff; border: 1px solid #e5e5e7; border-radius: 16px; padding: 26px; margin-bottom: 18px; }
+
+  /* drop zone */
+  #drop { border: 2px dashed #d2d2d7; border-radius: 12px; padding: 48px 20px; text-align: center; cursor: pointer; transition: border-color .2s, background .2s; }
+  #drop.hover { border-color: #c0392b; background: #fff5f4; }
+  #drop strong { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+  #drop span { color: #6e6e73; font-size: 0.85rem; }
+  #file { display: none; }
+
+  /* editor */
+  #editor { display: none; }
+  #stage-outer { position: relative; width: 100%; aspect-ratio: 4/3; background: #111; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+  #stage-outer.dragging { cursor: grabbing; }
+  #stage { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .grid-overlay { position: absolute; inset: 0; pointer-events: none; }
+  .grid-overlay::before, .grid-overlay::after { content: ""; position: absolute; background: rgba(255,255,255,0.25); }
+  .grid-overlay::before { left: 33.33%; right: 33.33%; top: 0; bottom: 0; border-left: 1px solid rgba(255,255,255,0.25); border-right: 1px solid rgba(255,255,255,0.25); background: none; }
+  .grid-overlay::after { top: 33.33%; bottom: 33.33%; left: 0; right: 0; border-top: 1px solid rgba(255,255,255,0.25); border-bottom: 1px solid rgba(255,255,255,0.25); background: none; }
+  .frame-label { position: absolute; top: 10px; left: 12px; background: rgba(0,0,0,0.55); color: #fff; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 6px; pointer-events: none; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 18px; }
+  .controls label { font-size: 0.8rem; font-weight: 700; color: #6e6e73; }
+  input[type=range] { width: 180px; accent-color: #c0392b; }
+  .btn { border: none; cursor: pointer; font-family: inherit; font-weight: 700; font-size: 0.85rem; padding: 10px 18px; border-radius: 980px; transition: all .15s; }
+  .btn-ghost { background: #fff; border: 1.5px solid #d2d2d7; color: #1d1d1f; }
+  .btn-ghost:hover { border-color: #1d1d1f; }
+  .btn-red { background: #c0392b; color: #fff; padding: 13px 26px; font-size: 0.92rem; }
+  .btn-red:hover { background: #a53125; }
+
+  .row { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; margin-top: 22px; }
+  .field { flex: 1 1 260px; }
+  .field label { display: block; font-size: 0.75rem; font-weight: 700; color: #6e6e73; margin-bottom: 6px; letter-spacing: 0.03em; text-transform: uppercase; }
+  .field input[type=text] { width: 100%; padding: 11px 14px; border: 1.5px solid #d2d2d7; border-radius: 10px; font-family: inherit; font-size: 0.9rem; }
+  .field input[type=text]:focus { outline: none; border-color: #c0392b; }
+  .hint { font-size: 0.75rem; color: #86868b; margin-top: 6px; }
+
+  .steps { font-size: 0.85rem; color: #3d3d3f; line-height: 1.7; }
+  .steps b { color: #1d1d1f; }
+  .ok { display: none; margin-top: 14px; background: #f0faf2; border: 1px solid #b7e4c0; color: #1d5c2a; padding: 12px 16px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="gate" style="position:fixed;inset:0;background:#f5f5f7;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border:1px solid #e5e5e7;border-radius:16px;padding:36px;max-width:400px;width:100%;text-align:center;">
+    <div style="font-weight:800;font-size:1.1rem;margin-bottom:6px;">Staff access</div>
+    <div style="color:#6e6e73;font-size:0.85rem;margin-bottom:20px;">This is an internal Rack N Road tool.</div>
+    <input type="password" id="gatecode" placeholder="Access code" style="width:100%;padding:12px 14px;border:1.5px solid #d2d2d7;border-radius:10px;font-family:inherit;font-size:0.95rem;text-align:center;" autocomplete="off">
+    <button class="btn btn-red" id="gatebtn" type="button" style="width:100%;margin-top:12px;">Enter</button>
+    <div id="gateerr" style="display:none;color:#c0392b;font-size:0.8rem;font-weight:600;margin-top:10px;">Incorrect code</div>
+  </div>
+</div>
+<script>
+(function(){
+  var CODE = "rnr1991";
+  var gate = document.getElementById('gate');
+  if (sessionStorage.getItem('rnr_tool_ok') === '1') { gate.style.display = 'none'; return; }
+  function tryCode(){
+    if (document.getElementById('gatecode').value === CODE) {
+      sessionStorage.setItem('rnr_tool_ok','1');
+      gate.style.display = 'none';
+    } else {
+      document.getElementById('gateerr').style.display = 'block';
+    }
+  }
+  document.getElementById('gatebtn').addEventListener('click', tryCode);
+  document.getElementById('gatecode').addEventListener('keydown', function(e){ if (e.key === 'Enter') tryCode(); });
+})();
+</script>
+<div class="wrap">
+  <h1>Shop Gallery Photo Tool</h1>
+  <p class="sub">Internal tool &mdash; crops any photo to the gallery's exact 4:3 tile, exports it web-ready. Nothing uploads anywhere; everything happens in your browser.</p>
+
+  <div class="panel">
+    <div id="drop">
+      <strong>Drop a photo here, or click to choose</strong>
+      <span>JPG, PNG, HEIC-converted, or phone photos &mdash; any size</span>
+      <input type="file" id="file" accept="image/*">
+    </div>
+
+    <div id="editor">
+      <div id="stage-outer">
+        <canvas id="stage"></canvas>
+        <div class="grid-overlay"></div>
+        <div class="frame-label">GALLERY CROP &mdash; 4:3</div>
+      </div>
+      <div class="controls">
+        <label>Zoom</label>
+        <input type="range" id="zoom" min="1" max="4" step="0.01" value="1">
+        <button class="btn btn-ghost" id="fitBtn" type="button">Reset</button>
+        <button class="btn btn-ghost" id="rotBtn" type="button">Rotate 90&deg;</button>
+        <button class="btn btn-ghost" id="newBtn" type="button">Different photo</button>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>File name (SEO)</label>
+          <input type="text" id="fname" value="sacramento-store-rack-n-road-install" spellcheck="false">
+          <div class="hint">Lowercase, hyphens, describes the work &mdash; e.g. <em>sacramento-store-rack-n-road-thule-bike-rack-install</em></div>
+        </div>
+        <button class="btn btn-red" id="saveBtn" type="button">Download gallery-ready photo</button>
+      </div>
+      <div class="ok" id="okMsg">Saved. Send it to Olaf for the media library (or add it to the deploy folder) &mdash; it will display identically to every other gallery tile.</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="steps">
+      <b>How it works:</b> drag the photo to position it, zoom to frame the subject, download.
+      The export is <b>1600&times;1200 (4:3)</b> &mdash; the same shape as every gallery tile &mdash; compressed for the web (WebP, JPG fallback), so it will
+      load fast and line up perfectly with the existing photos. The live gallery also enforces this shape in CSS
+      (<code>aspect-ratio: 4/3; object-fit: cover</code>), so nothing you add can ever break the grid.
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var drop = document.getElementById('drop');
+  var fileInput = document.getElementById('file');
+  var editor = document.getElementById('editor');
+  var stageOuter = document.getElementById('stage-outer');
+  var canvas = document.getElementById('stage');
+  var ctx = canvas.getContext('2d');
+  var zoomEl = document.getElementById('zoom');
+  var okMsg = document.getElementById('okMsg');
+
+  var img = null, rotation = 0;
+  var scale = 1, minScale = 1, offX = 0, offY = 0;
+  var dragging = false, lastX = 0, lastY = 0;
+
+  var OUT_W = 1600, OUT_H = 1200;
+
+  function cw(){ return stageOuter.clientWidth; }
+  function ch(){ return stageOuter.clientHeight; }
+
+  function imgW(){ return (rotation % 180 === 0) ? img.naturalWidth : img.naturalHeight; }
+  function imgH(){ return (rotation % 180 === 0) ? img.naturalHeight : img.naturalWidth; }
+
+  function clamp(){
+    var w = imgW() * scale, h = imgH() * scale;
+    var minX = cw() - w, minY = ch() - h;
+    if (offX > 0) offX = 0; if (offY > 0) offY = 0;
+    if (offX < minX) offX = minX; if (offY < minY) offY = minY;
+  }
+
+  function draw(){
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width = cw() * dpr; canvas.height = ch() * dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,cw(),ch());
+    ctx.save();
+    ctx.translate(offX, offY);
+    ctx.scale(scale, scale);
+    drawRotated(ctx);
+    ctx.restore();
+  }
+
+  function drawRotated(c){
+    if (rotation === 0) { c.drawImage(img, 0, 0); return; }
+    c.save();
+    if (rotation === 90)  { c.translate(imgW(), 0); c.rotate(Math.PI/2); }
+    if (rotation === 180) { c.translate(imgW(), imgH()); c.rotate(Math.PI); }
+    if (rotation === 270) { c.translate(0, imgH()); c.rotate(-Math.PI/2); }
+    c.drawImage(img, 0, 0);
+    c.restore();
+  }
+
+  function resetView(){
+    minScale = Math.max(cw()/imgW(), ch()/imgH());
+    scale = minScale;
+    zoomEl.min = 1; zoomEl.value = 1;
+    offX = (cw() - imgW()*scale)/2;
+    offY = (ch() - imgH()*scale)/2;
+    clamp(); draw();
+  }
+
+  function load(file){
+    if (!file || !file.type.match(/^image\//)) return;
+    var url = URL.createObjectURL(file);
+    var i = new Image();
+    i.onload = function(){
+      img = i; rotation = 0;
+      drop.style.display = 'none';
+      editor.style.display = 'block';
+      okMsg.style.display = 'none';
+      resetView();
+    };
+    i.src = url;
+  }
+
+  drop.addEventListener('click', function(){ fileInput.click(); });
+  fileInput.addEventListener('change', function(e){ load(e.target.files[0]); });
+  ['dragover','dragenter'].forEach(function(ev){
+    drop.addEventListener(ev, function(e){ e.preventDefault(); drop.classList.add('hover'); });
+  });
+  ['dragleave','drop'].forEach(function(ev){
+    drop.addEventListener(ev, function(e){ e.preventDefault(); drop.classList.remove('hover'); });
+  });
+  drop.addEventListener('drop', function(e){ load(e.dataTransfer.files[0]); });
+
+  zoomEl.addEventListener('input', function(){
+    var cxp = cw()/2, cyp = ch()/2;
+    var relX = (cxp - offX)/scale, relY = (cyp - offY)/scale;
+    scale = minScale * parseFloat(zoomEl.value);
+    offX = cxp - relX*scale; offY = cyp - relY*scale;
+    clamp(); draw();
+  });
+
+  stageOuter.addEventListener('pointerdown', function(e){
+    dragging = true; lastX = e.clientX; lastY = e.clientY;
+    stageOuter.classList.add('dragging');
+    stageOuter.setPointerCapture(e.pointerId);
+  });
+  stageOuter.addEventListener('pointermove', function(e){
+    if (!dragging) return;
+    offX += e.clientX - lastX; offY += e.clientY - lastY;
+    lastX = e.clientX; lastY = e.clientY;
+    clamp(); draw();
+  });
+  stageOuter.addEventListener('pointerup', function(){ dragging = false; stageOuter.classList.remove('dragging'); });
+  stageOuter.addEventListener('wheel', function(e){
+    e.preventDefault();
+    var v = parseFloat(zoomEl.value) * (e.deltaY < 0 ? 1.06 : 0.94);
+    v = Math.min(4, Math.max(1, v));
+    zoomEl.value = v;
+    zoomEl.dispatchEvent(new Event('input'));
+  }, { passive:false });
+
+  document.getElementById('fitBtn').addEventListener('click', resetView);
+  document.getElementById('rotBtn').addEventListener('click', function(){
+    rotation = (rotation + 90) % 360; resetView();
+  });
+  document.getElementById('newBtn').addEventListener('click', function(){
+    editor.style.display = 'none'; drop.style.display = 'block'; fileInput.value = '';
+  });
+  window.addEventListener('resize', function(){ if (img) { resetView(); } });
+
+  document.getElementById('saveBtn').addEventListener('click', function(){
+    var out = document.createElement('canvas');
+    out.width = OUT_W; out.height = OUT_H;
+    var octx = out.getContext('2d');
+    var f = OUT_W / cw();
+    octx.save();
+    octx.scale(f, f);
+    octx.translate(offX, offY);
+    octx.scale(scale, scale);
+    drawRotated(octx);
+    octx.restore();
+
+    var name = (document.getElementById('fname').value || 'sacramento-store-rack-n-road-install')
+      .toLowerCase().replace(/[^a-z0-9-]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+
+    function save(blob, ext){
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = name + ext;
+      a.click();
+      okMsg.style.display = 'block';
+    }
+    out.toBlob(function(b){
+      if (b && b.type === 'image/webp') { save(b, '.webp'); }
+      else { out.toBlob(function(j){ save(j, '.jpg'); }, 'image/jpeg', 0.82); }
+    }, 'image/webp', 0.82);
+  });
+})();
+</script>
+</body>
+</html>
