@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+
+<!-- SEO -->
+<title>What We Stand For | Rack N Road</title>
+<link rel="stylesheet" href="rnr-typography.css" />
+<meta name="description" content="What we stand for: the owners' beliefs that have kept Rack N Road in business for 35+ years and earned a <a href="https://www.google.com/maps/search/?api=1&amp;query=Rack+N+Road+2021+Arden+Way+Sacramento+CA" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;">4.9 customer rating</a> — we only sell what we can stand behind, and we say so out loud." />
+<link rel="canonical" href="https://www.racknroad.com/what-we-stand-for" />
+<meta property="og:title" content="What We Stand For — Rack N Road" />
+<meta property="og:description" content="What 35 years and a 4.9 rating have taught us: the judgment, honesty, and standards behind every rack, hitch, and install we put our name on." />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Rack N Road" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<style>
+  :root{
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #f5f5f7;
+    --ink: #1d1d1f;
+    --ink-2: #3a3a3c;
+    --muted: #6e6e73;
+    --line: #e4e4e7;
+    --accent: #c8371d;
+    --accent-ink: #a02912;
+    --accent-soft: rgba(200,55,29,.08);
+    --good: #2f8f4e;
+    --bad: #c0392b;
+    --nav-bg: rgba(255,255,255,.72);
+    --radius: 16px;
+    --radius-lg: 24px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.04), 0 6px 18px rgba(0,0,0,.05);
+    --shadow-md: 0 12px 40px rgba(0,0,0,.10);
+    --container: 1120px;
+    --maxprose: 720px;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg: #000000;
+      --surface: #1c1c1e;
+      --surface-2: #131315;
+      --ink: #f5f5f7;
+      --ink-2: #d7d7db;
+      --muted: #98989d;
+      --line: #2c2c2e;
+      --accent: #ff6a4d;
+      --accent-ink: #ff8a73;
+      --accent-soft: rgba(255,106,77,.12);
+      --good: #4cc471;
+      --bad: #ff6a5a;
+      --nav-bg: rgba(0,0,0,.6);
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.5);
+      --shadow-md: 0 16px 48px rgba(0,0,0,.6);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html{ font-size: 91.2%; scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height:1.55;
+    font-size: 17px;
+    letter-spacing: -0.005em;
+  }
+
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  ::selection{ background: var(--accent-soft); }
+  :focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  .container{
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* SCROLL PROGRESS */
+  .progress{
+    position: fixed; top:0; left:0; height:2px; width:0%;
+    background: var(--accent); z-index: 100;
+    transition: width .1s linear;
+  }
+
+  /* NAV */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    height:56px;
+  }
+  .brand{
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-size: 18px;
+    text-decoration:none;
+  }
+  .brand span{color:var(--accent)}
+  .nav-links{display:flex; gap:26px; font-size:14.5px; color:var(--ink-2)}
+  .nav-links a{text-decoration:none; opacity:.82; transition: opacity .2s ease}
+  .nav-links a:hover{opacity:1}
+  .nav-cta{
+    display:inline-flex; align-items:center; gap:6px;
+    background: var(--accent); color:#fff;
+    padding: 8px 16px; border-radius: 999px;
+    text-decoration:none; font-size:14px; font-weight:600;
+    transition: background .2s ease, transform .15s ease;
+  }
+  .nav-cta:hover{ background: var(--accent-ink); transform: translateY(-1px) }
+  @media (max-width: 820px){ .nav-links{display:none} }
+
+  /* CTA BUTTONS */
+  .cta-row{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding: 16px 30px;
+    border-radius: 999px;
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.005em;
+    transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary{
+    background: var(--accent);
+    color:#fff;
+    box-shadow: 0 6px 20px rgba(200,55,29,.22);
+  }
+  .btn-primary:hover{
+    transform: translateY(-1px);
+    background: var(--accent-ink);
+    box-shadow: 0 10px 28px rgba(200,55,29,.28);
+  }
+  .btn-ghost{
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+  }
+  .btn-ghost:hover{ background: var(--surface-2); transform: translateY(-1px) }
+  .btn .arr{ display:inline-block; transition: transform .2s ease; }
+  .btn-primary:hover .arr{ transform: translateX(4px); }
+
+  /* SECTION FRAME */
+  section{ padding: clamp(46px, 5.6vw, 76px) 0; }
+  .section-head{
+    max-width: 740px;
+    margin: 0 auto clamp(24px, 3.2vw, 40px);
+    text-align: center;
+  }
+  .kicker{
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  h2{
+    font-size: clamp(29px, 3.6vw, 50px);
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+    margin: 0 0 18px;
+    font-weight: 680;
+    text-wrap: balance;
+  }
+  h3{
+    font-size: clamp(19px, 2vw, 23px);
+    letter-spacing: -0.015em;
+    margin: 0 0 10px;
+    font-weight: 620;
+  }
+  .section-head p{
+    color: var(--muted);
+    font-size: clamp(16px, 1.3vw, 19px);
+    line-height: 1.6;
+  }
+
+  .prose{
+    max-width: var(--maxprose);
+    margin: 0 auto;
+    color: var(--ink-2);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .prose p + p{ margin-top: 18px }
+
+  .band{
+    background: var(--surface-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Permanently-dark band (kept dark in both themes for contrast) */
+  .band-dark{
+    background: #0b0b0c;
+    color: #ededeb;
+    border-top: 1px solid #1e1e20;
+    border-bottom: 1px solid #1e1e20;
+  }
+  .band-dark h2{ color:#fff }
+  .band-dark .kicker{ color:#ff8a73 }
+  .band-dark .section-head p{ color:#b7b7b3 }
+
+  /* BREADCRUMB */
+  .crumb{
+    font-size: 13px; color: var(--muted);
+    padding: 20px 0 0;
+  }
+  .crumb a{ text-decoration:none; opacity:.9 }
+  .crumb a:hover{ color: var(--accent) }
+  .crumb span{ margin: 0 8px; opacity:.5 }
+
+  /* LEAD */
+  .first-section{ padding-top: clamp(48px, 6vw, 72px); }
+  .first-section .section-head{ max-width: 860px; margin-bottom: clamp(44px, 6vw, 64px); }
+  .first-section .kicker{ margin-bottom: 28px; letter-spacing: .24em; }
+  .first-section h2{
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.1;
+    max-width: 24ch;
+    margin-inline: auto;
+  }
+  .first-section h2 .lead-line{
+    display:block;
+    font-size: clamp(34px, 3.8vw, 54px);
+    line-height: 1.06;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+  .first-section .section-head p{ margin-top: 26px; max-width: 620px; margin-inline: auto; font-size: 18px; line-height:1.65; }
+
+  /* TRUST / BRANDS STRIP */
+  .trust{
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+  }
+  .trust-inner{
+    display:flex; align-items:center; justify-content:center; flex-wrap:wrap;
+    gap: 14px 40px;
+    padding: 26px 0;
+  }
+  .trust-label{
+    font-size: 12px; text-transform: uppercase; letter-spacing:.18em;
+    color: var(--muted); font-weight:600;
+  }
+  .trust-brands{ display:flex; align-items:center; flex-wrap:wrap; gap: 12px 30px; }
+  .trust-brands span{
+    font-weight: 640; font-size: 17px; letter-spacing:-0.01em;
+    color: var(--ink-2); opacity:.85;
+  }
+
+  /* BRAND WALL */
+  .brand-wall{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:12px;
+    max-width: 940px; margin: 0 auto;
+  }
+  .brand-wall span{
+    background: var(--surface); border:1px solid var(--line);
+    border-radius:999px; padding:11px 20px;
+    font-weight:600; font-size:15px; letter-spacing:-0.01em;
+    color: var(--ink-2);
+    transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .brand-wall span:hover{ transform: translateY(-2px); box-shadow: var(--shadow-sm); border-color: transparent; }
+  .brand-note{ text-align:center; color: var(--muted); font-size: 14px; margin-top: 26px; }
+
+  /* QUESTION COMPARE */
+  .compare{ display:grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .compare > div{
+    border-radius: var(--radius-lg);
+    padding: 34px 30px;
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+  }
+  .compare h4{
+    font-size: 13px; text-transform: uppercase; letter-spacing: .18em;
+    margin: 0 0 18px; font-weight: 700;
+  }
+  .compare .bad h4{ color: var(--bad) }
+  .compare .good h4{ color: var(--good) }
+  .compare ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px; }
+  .compare li{ font-size: 16.5px; line-height: 1.5; color: var(--ink-2); padding-left: 28px; position: relative; }
+  .compare .bad li::before{ content:"✕"; position:absolute; left:0; top:0; color:var(--bad); font-weight:700; }
+  .compare .good li::before{ content:"✓"; position:absolute; left:0; top:0; color:var(--good); font-weight:700; }
+  @media (max-width: 760px){ .compare{ grid-template-columns: 1fr } }
+
+  /* CARD GRID */
+  .grid-3{ display:grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  .grid-2{ display:grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+  .card{
+    background: var(--surface);
+    border:1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 30px 28px;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: transparent; }
+  .card .num{
+    display:inline-flex; align-items:center; justify-content:center;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--ink); color: var(--bg);
+    font-size: 13px; font-weight: 600; margin-bottom: 18px;
+  }
+  .card p{ color: var(--muted); margin: 0 }
+  @media (max-width: 900px){ .grid-3{grid-template-columns:1fr 1fr} }
+  @media (max-width: 640px){ .grid-3, .grid-2{grid-template-columns:1fr} }
+
+  /* SYSTEM LOAD CALCULATOR */
+  .calc-wrap{ display:grid; grid-template-columns:1.05fr .95fr; gap:36px; align-items:start; }
+  @media (max-width:880px){ .calc-wrap{ grid-template-columns:1fr; gap:26px; } }
+  .calc-card{ background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:26px; box-shadow:var(--shadow-sm); }
+  .calc-row{ display:flex; align-items:center; justify-content:space-between; gap:14px; padding:13px 0; border-bottom:1px solid var(--line); }
+  .calc-row:last-of-type{ border-bottom:none; }
+  .calc-row label{ font-weight:600; font-size:15px; color:var(--ink); }
+  .calc-row label small{ display:block; font-weight:400; color:var(--muted); font-size:12.5px; margin-top:2px; }
+  .calc-input{ display:flex; align-items:center; gap:6px; background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:4px 8px; }
+  .calc-input input{ width:64px; border:none; background:transparent; font:inherit; font-weight:700; font-size:16px; text-align:right; color:var(--ink); padding:6px 2px; }
+  .calc-input input:focus{ outline:none; }
+  .calc-input .unit{ font-size:12px; color:var(--muted); font-weight:600; }
+  .calc-total{ margin-top:10px; padding:18px 20px; border-radius:16px; background:#0b0b0c; color:#fff; display:flex; align-items:baseline; justify-content:space-between; }
+  .calc-total .t-lab{ font-size:11.5px; color:#9a9a9f; text-transform:uppercase; letter-spacing:.1em; font-weight:600; }
+  .calc-total .t-num{ font-size:2.2rem; font-weight:700; letter-spacing:-0.03em; }
+  .calc-total .t-num .u{ font-size:0.9rem; font-weight:600; color:#9a9a9f; margin-left:4px; }
+  .calc-total .t-sub{ font-size:11.5px; color:#9a9a9f; font-weight:500; margin-top:5px; max-width:260px; }
+  .calc-total.is-secondary{ background:var(--surface-2); color:var(--ink); padding:12px 18px; margin-top:10px; }
+  .calc-total.is-secondary .t-lab{ color:var(--muted); }
+  .calc-total .t-num.sm{ font-size:1.4rem; }
+  .calc-flag{ margin-top:14px; padding:13px 15px; border-radius:12px; font-size:14px; line-height:1.5; display:flex; gap:9px; align-items:flex-start; }
+  .calc-flag svg{ width:17px; height:17px; flex:none; margin-top:2px; }
+  .calc-flag.is-ok{ background:rgba(47,143,78,.12); color:var(--good); }
+  .calc-flag.is-watch{ background:var(--accent-soft); color:var(--accent); }
+  .calc-note{ font-size:12.5px; color:var(--muted); margin-top:14px; line-height:1.55; }
+  .calc-side h3{ font-size:clamp(20px,2vw,24px); letter-spacing:-0.015em; margin-bottom:14px; }
+  .calc-side .pt{ display:flex; gap:11px; margin-bottom:16px; align-items:flex-start; }
+  .calc-side .pt b{ display:block; margin-bottom:3px; font-size:15px; color:var(--ink); }
+  .calc-side .pt span{ color:var(--muted); font-size:14.5px; line-height:1.55; }
+  .calc-side .dot{ width:7px; height:7px; border-radius:50%; background:var(--accent); margin-top:8px; flex:none; }
+
+  /* LAYER STACK (clean, meter-based) */
+  .layers{ max-width: 760px; margin: 0 auto; display:flex; flex-direction:column; gap: 12px; }
+  .layer{
+    background: var(--surface);
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    transition: transform .15s ease, box-shadow .2s ease;
+  }
+  .layer:hover{ transform: translateX(4px); box-shadow: var(--shadow-sm) }
+  .layer-top{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; }
+  .layer .lyr-num{ font-size: 11.5px; font-weight:700; letter-spacing: .18em; color: var(--accent); text-transform: uppercase; }
+  .layer .lyr-title{ font-size: 18px; font-weight: 620; margin: 5px 0 0; }
+  .layer .lyr-desc{ color: var(--muted); font-size: 14.5px; margin-top:6px; max-width: 520px; }
+  .layer .pct{ font-size: clamp(24px, 3vw, 34px); font-weight: 700; letter-spacing: -0.02em; color: var(--ink); white-space:nowrap; }
+  .meter{ height:6px; border-radius:999px; background: var(--surface-2); margin-top:16px; overflow:hidden; border:1px solid var(--line); }
+  .meter .fill{ height:100%; border-radius:999px; background: linear-gradient(90deg, var(--accent), var(--accent-ink)); }
+
+  /* BIKE RACK MODULE */
+  .bike-mosaic{ display:grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
+  .bike-mosaic .feature{
+    background:
+      radial-gradient(700px 220px at 80% 0%, rgba(200,55,29,.16), transparent 60%),
+      linear-gradient(180deg,#0d0d0e,#1a1a1c);
+    color:#f5f4ef;
+    border-radius: var(--radius-lg);
+    padding: 42px 38px;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    min-height: 360px;
+  }
+  .bike-mosaic .feature h3{ color:#fff; font-size: clamp(23px, 2.4vw, 30px); letter-spacing: -0.02em; margin-bottom: 12px; }
+  .bike-mosaic .feature p{ color:#c3c2bc; max-width: 40ch }
+  .bike-mosaic .stack{ display:flex; flex-direction:column; gap: 20px }
+  .bike-mosaic .mini{ background: var(--surface); border:1px solid var(--line); border-radius: var(--radius-lg); padding: 26px; }
+  .bike-mosaic .mini h4{ margin: 0 0 8px; font-size: 17px; font-weight: 620; }
+  .bike-mosaic .mini p{ margin:0; color: var(--muted); font-size: 15px }
+  @media (max-width: 860px){ .bike-mosaic{ grid-template-columns: 1fr } .bike-mosaic .feature{min-height: 300px} }
+
+  /* MISTAKES */
+  .mistakes{ display:grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+  .mistake{ display:flex; gap: 18px; background: var(--surface); border:1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .mistake .idx{
+    flex:none; width:34px; height:34px; border-radius:50%;
+    background: var(--accent-soft); color: var(--accent);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-weight:700;
+  }
+  .mistake h4{margin:0 0 6px; font-size:16px; font-weight:620}
+  .mistake p{margin:0; color: var(--muted); font-size:14.5px}
+  @media (max-width: 760px){ .mistakes{ grid-template-columns: 1fr } }
+
+  /* OFFER CALLOUT */
+  .offer{
+    max-width: 760px; margin: clamp(24px,2.8vw,38px) auto 0;
+    background: var(--surface); border:1px solid var(--line);
+    border-radius: var(--radius-lg); padding: clamp(28px,3vw,38px);
+    text-align:center; box-shadow: var(--shadow-sm);
+  }
+  .offer .tag{ font-size:12px; text-transform:uppercase; letter-spacing:.18em; color:var(--accent); font-weight:600; margin-bottom:12px; }
+  .offer h3{ margin:0 0 12px; }
+  .offer p{ margin:0 auto; max-width:58ch; color: var(--muted); font-size:16.5px; line-height:1.7; }
+
+  /* DIFFERENCE BAND */
+  .diff-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:16px; }
+  .diff{ background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09); border-radius: var(--radius); padding: 26px 22px; }
+  .diff .ico{
+    width:38px;height:38px;border-radius:11px;
+    background:linear-gradient(180deg, #d5502f, #a02912);
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; font-weight:700; margin-bottom:14px;
+  }
+  .diff h4{margin:0 0 6px; color:#fff; font-size:16px; font-weight:620}
+  .diff p{margin:0; color:#b7b7b3; font-size:14.5px; line-height:1.55}
+  @media (max-width: 900px){ .diff-grid{grid-template-columns:1fr 1fr} }
+  @media (max-width: 540px){ .diff-grid{grid-template-columns:1fr} }
+
+  /* FAQ */
+  .faq{ max-width: 820px; margin: 0 auto; border-top: 1px solid var(--line); }
+  details{ border-bottom: 1px solid var(--line); padding: 22px 4px; }
+  details summary{
+    cursor: pointer; list-style: none;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size: 18.5px; font-weight: 580; letter-spacing: -0.01em; color: var(--ink);
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{ content:"+"; font-size: 24px; color: var(--muted); transition: transform .2s ease; margin-left: 16px; line-height:1; }
+  details[open] summary::after{ content:"−"; color: var(--accent) }
+  details .ans{ margin-top: 14px; color: var(--muted); line-height: 1.7; font-size: 16.5px; }
+
+  /* CTA FINAL */
+  .cta-final{
+    text-align:center; padding: clamp(58px, 7vw, 92px) 0;
+    background:
+      radial-gradient(900px 400px at 50% 0%, var(--accent-soft), transparent 60%),
+      var(--surface-2);
+    border-top: 1px solid var(--line);
+  }
+  .cta-final h2{ font-size: clamp(32px, 5vw, 60px); letter-spacing: -0.03em; max-width: 16ch; margin: 0 auto 18px; }
+  .cta-final p{ max-width: 620px; margin: 0 auto 32px; color: var(--muted); font-size: 19px; line-height:1.55; }
+
+  footer{ padding: 38px 0 52px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; text-align:center; }
+  footer .meta-info{ margin-top: 16px; font-size: 12.5px; opacity:.7; max-width: 900px; margin-inline:auto; }
+
+  /* reveal */
+  .reveal{ opacity:0; transform: translateY(14px); transition: opacity .8s ease, transform .8s ease }
+  .reveal.in{ opacity:1; transform: none }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    .reveal{ opacity:1; transform:none }
+  }
+</style>
+</head>
+<body>
+<!-- CANONICAL HOME: racknroad.com/what-we-stand-for/ — company-level page, ONE copy
+     for all eight stores (do not duplicate per store). PRODUCTION (Olaf): replace this
+     standalone nav/header with the site header; keep h1 + schema. Store pages link in
+     via "What we stand for" in their Difference sections. -->
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="https://racknroad.com/" class="brand">Rack <span>N</span> Road</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/bike-racks-101">Bike Racks</a><!-- PRODUCTION (Olaf): /store/sacramento/bike-racks-101/ -->
+      <a href="https://racknroad.com/trailer-hitches/">Hitches</a>
+      <a href="https://racknroad.com/category/cargo/roof-boxes/">Cargo Boxes</a>
+      <a href="https://racknroad.com/installation/">Installation</a>
+      <a href="#start-here">What We Stand For</a>
+      <a href="https://racknroad.com/stores/">Locations</a>
+    </nav>
+    <a class="nav-cta" href="https://racknroad.com/store/sacramento/intake/">Let's Get It Right →</a>
+  </div>
+</header>
+
+<!-- WHAT WE STAND FOR — opening core value -->
+<section id="start-here" style="padding-top: clamp(26px, 3.2vw, 44px)">
+  <div class="container">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="https://racknroad.com/">Home</a><span>/</span>What We Stand For
+    </nav>
+    <div class="section-head">
+      <div class="kicker">What We Stand For · Since 1991 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Rack+N+Road+2021+Arden+Way+Sacramento+CA" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;">4.9★ Rating</a></div>
+      <h1>The biggest mistake we can make is selling or installing something we can't stand behind.</h1>
+      <p>Plenty of products would be easy money for us. We turn most of them down — and after 35 years, that instinct is one of the truest things we own.</p>
+    </div>
+    <div class="prose">
+      <p>There's no shortage of manufacturers who'd love us to carry their line — rooftop tents, overlanding gear, tonneau covers, running boards. Some of it is genuinely good. A lot of it comes from brands that are "just" looking for a reseller, not a partner who'll still pick up the phone when something goes wrong two years down the road.</p>
+      <p>So we're careful about whose name goes next to ours. Because when there's a problem, you don't call the manufacturer — you come back to us. And you should. By then we've usually already paid for that product once, and standing behind it means paying again to make it right. We'd rather pass on the sale than set us both up for that.</p>
+      <p>Our trusted vendors are everything. In three and a half decades, the rare time a customer has had a real complaint, it almost always traced back to a vendor who wanted a reseller more than they wanted to back their product. We've learned to feel the difference early — and to walk away.</p>
+    </div>
+
+    <div class="offer">
+      <div class="tag">Bought it elsewhere? Bring it in.</div>
+      <h3>We'll install the gear we don't carry — honestly, and upfront.</h3>
+      <p>If there's a tent, cover, or rack you love from a brand we don't stock, buy it wherever you like and bring it to us. We'll give you a clear, upfront price to install it right — no guesswork, no surprises. You get our hands on the product you want, and we're both honest about who's standing behind what.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS WE STAND BEHIND -->
+<section class="band">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">The brands we stand behind</div>
+      <h2>Partners we'll put our name next to.</h2>
+      <p>Every line we carry, we install — and back. We're an authorized dealer and installer for the industry's most trusted manufacturers, across racks, hitches, truck beds, and overlanding.</p>
+    </div>
+    <div class="brand-wall">
+      <span>Yakima</span>
+      <span>Thule</span>
+      <span>Rhino-Rack</span>
+      <span>Kuat</span>
+      <span>Saris</span>
+      <span>RockyMounts</span>
+      <span>Inno</span>
+      <span>Curt</span>
+      <span>Stealth Hitches</span>
+      <span>DECKED</span>
+      <span>Front Runner</span>
+      <span>Dometic</span>
+      <span>SmartCap</span>
+      <span>RealTruck</span>
+    </div>
+    <p class="brand-note">Authorized dealer &amp; installer since 1991. If we carry it, we back it.</p>
+  </div>
+</section>
+
+<!-- AGE -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Honest advice</div>
+      <h2>Your age matters. We say it because no one else will.</h2>
+    </div>
+    <div class="prose">
+      <p>This is one of the most useful conversations we have with customers, and it almost never happens online. The rack that makes sense at 35 may not make sense at 60. Lifting a 40-pound bike over your head onto a roof rack is a different ask at different points in your life — and we'd rather have an honest conversation about it now than watch you stop riding because the rack got hard.</p>
+      <p>Hitch-mounted platform racks have transformed the experience for an enormous number of our customers. Lower lift, easier load, less strain. There is no shame in choosing the rack that keeps you outdoors longer. That's the entire point.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHYSICS / SYSTEM LOAD CALCULATOR -->
+<section class="band">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Weight, leverage &amp; torque</div>
+      <h2>The physics matter more than the marketing.</h2>
+      <p>A rack doesn't just carry weight — it multiplies it. The farther your gear sits behind the hitch, the harder it levers your vehicle. Estimate your real system load:</p>
+    </div>
+
+    <div class="calc-wrap">
+      <div class="calc-card" aria-label="System load estimator">
+        <div class="calc-row">
+          <label for="rackW">Rack weight <small>The carrier itself</small></label>
+          <span class="calc-input"><input id="rackW" type="number" min="0" max="120" value="53" inputmode="numeric" aria-label="Rack weight in pounds"><span class="unit">lb</span></span>
+        </div>
+        <div class="calc-row">
+          <label for="bike1">Bike 1 <small>Actual weight, fully equipped</small></label>
+          <span class="calc-input"><input id="bike1" type="number" min="0" max="120" value="62" inputmode="numeric" aria-label="First bike weight in pounds"><span class="unit">lb</span></span>
+        </div>
+        <div class="calc-row">
+          <label for="bike2">Bike 2 <small>Leave 0 if carrying one</small></label>
+          <span class="calc-input"><input id="bike2" type="number" min="0" max="120" value="58" inputmode="numeric" aria-label="Second bike weight in pounds"><span class="unit">lb</span></span>
+        </div>
+        <div class="calc-row">
+          <label for="extra">Accessories <small>Locks, batteries left on, baskets</small></label>
+          <span class="calc-input"><input id="extra" type="number" min="0" max="60" value="6" inputmode="numeric" aria-label="Accessory weight in pounds"><span class="unit">lb</span></span>
+        </div>
+        <div class="calc-row">
+          <label for="dist">Load distance behind receiver <small>Receiver face to center of the bikes</small></label>
+          <span class="calc-input"><input id="dist" type="number" min="0.5" max="4" step="0.5" value="2" inputmode="decimal" aria-label="Load distance behind receiver, in feet"><span class="unit">ft</span></span>
+        </div>
+        <div class="calc-total is-secondary">
+          <span class="t-lab">Actual weight on the receiver</span>
+          <span class="t-num sm"><span id="calcTotal">179</span><span class="u">lb</span></span>
+        </div>
+        <div class="calc-total">
+          <div><span class="t-lab">Effective load, leverage-adjusted*</span>
+            <div class="t-sub" id="calcBreak">179 lb &times; ~2.0 ft back &middot; &asymp;358 lb-ft on the receiver</div></div>
+          <span class="t-num"><span id="calcEff">358</span><span class="u">lb*</span></span>
+        </div>
+        <div id="calcFlag" class="calc-flag is-watch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          <span id="calcFlagText">At this load you are almost certainly looking at a 2&Prime; receiver and a heavy-duty platform rack. Let us confirm your vehicle's rating.</span>
+        </div>
+        <p class="calc-note">*Leverage estimate, not a safety rating. The straight-down weight does not change — but a load carried farther back levers the hitch harder: roughly double the distance, double the strain. Hitches are rated with the load close to the receiver, and reaching well past that point can cut usable capacity by up to about half. Bumps and braking spike it higher still. We verify your vehicle's and hitch's actual ratings in person.</p>
+      </div>
+
+      <div class="calc-side">
+        <h3>Total weight is the first question, not the last.</h3>
+        <div class="pt"><span class="dot"></span><div><b>Leverage works like a lever</b><span>A loaded rack sits well behind the receiver, so its weight acts on a lever arm. Double how far it reaches back and you roughly double the bending strain on the hitch — which is why two racks of the same weight can behave very differently.</span></div></div>
+        <div class="pt"><span class="dot"></span><div><b>The lowest-rated component wins</b><span>Bike, rack, hitch and vehicle each carry a rating. The smallest one controls the system. A 100-lb rack on a 1.25&Prime; Class 2 hitch is still limited by the hitch.</span></div></div>
+        <div class="pt"><span class="dot"></span><div><b>EVs, hybrids &amp; batteries</b><span>Battery placement changes what your platform can handle, and some racks only hit their rating with the battery removed. Where it lives also changes where a clamp can safely grip.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 YEARS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Long-term thinking</div>
+      <h2>Buy for the next 10 years, not just this weekend.</h2>
+      <p>The cheapest rack is rarely the cheapest rack. We've replaced more "saved $100" purchases than we can count — usually after a trip got cut short, paint got scratched, or the rack didn't fit the next vehicle. A premium system, chosen well, often costs less per year than the budget pick it replaced twice.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="num">1</div>
+        <h3>Think in seasons, not trips.</h3>
+        <p>Will this rack handle ski season, summer biking, fall paddling, and a holiday road trip — or just the next weekend?</p>
+      </div>
+      <div class="card">
+        <div class="num">2</div>
+        <h3>Plan for the next bike, not just this one.</h3>
+        <p>Most customers move toward heavier bikes over time. Choose a system with headroom for the e-bike or full-suspension you might own in three years.</p>
+      </div>
+      <div class="card">
+        <div class="num">3</div>
+        <h3>Check the warranty and the dealer.</h3>
+        <p>A 10-year warranty is only as good as the people standing behind it. We've been here for 35 years. We plan to be here for the next 35.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARGO BOXES -->
+<section class="band">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Practical, not promotional</div>
+      <h2>Cargo boxes: should you buy or rent?</h2>
+      <p>This is one of the few times we'll talk a customer out of a purchase. The right answer depends on how often you'll really use it — not how often you imagine you might.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Rent if…</h3>
+        <p style="margin-top:12px">You take one or two long road trips a year, you have nowhere to store a 7-foot box, or you're not yet sure if your travel pattern is going to stick. <a href="https://racknroad.com/store/sacramento/cargo-box-rentals/" style="color:var(--accent); text-decoration:underline">Our rental program</a> exists for exactly this customer.</p>
+      </div>
+      <div class="card">
+        <h3>Buy if…</h3>
+        <p style="margin-top:12px">You ski every weekend, you travel with kids and gear three or more times a year, or you've already rented twice and know the box pays for itself. At that point, a quality box is a 10-15 year investment, not a seasonal expense.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYERS / NEXT CAR -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Future-proofing your investment</div>
+      <h2>How much of your investment moves to the next car?</h2>
+      <p>Think of a complete rack setup as four layers. Some travel with you forever. Some don't. Knowing which is which is how customers protect their money.</p>
+    </div>
+
+    <div class="layers">
+      <div class="layer">
+        <div class="layer-top">
+          <div>
+            <div class="lyr-num">Layer 01 · Highest portability</div>
+            <div class="lyr-title">The accessory itself</div>
+            <div class="lyr-desc">Your bike trays, ski mounts, kayak saddles, cargo box. These almost always move with you to the next vehicle.</div>
+          </div>
+          <div class="pct">~95%</div>
+        </div>
+        <div class="meter"><div class="fill" style="width:95%"></div></div>
+      </div>
+      <div class="layer">
+        <div class="layer-top">
+          <div>
+            <div class="lyr-num">Layer 02 · High portability</div>
+            <div class="lyr-title">The rack or platform</div>
+            <div class="lyr-desc">Hitch-mounted platforms typically transfer cleanly to a new vehicle, as long as the new vehicle has the right hitch class.</div>
+          </div>
+          <div class="pct">~80%</div>
+        </div>
+        <div class="meter"><div class="fill" style="width:80%"></div></div>
+      </div>
+      <div class="layer">
+        <div class="layer-top">
+          <div>
+            <div class="lyr-num">Layer 03 · Partial portability</div>
+            <div class="lyr-title">Crossbars and feet</div>
+            <div class="lyr-desc">Crossbars often move; feet and fit kits are vehicle-specific. A good specifier saves you from re-buying the wrong half.</div>
+          </div>
+          <div class="pct">~50%</div>
+        </div>
+        <div class="meter"><div class="fill" style="width:50%"></div></div>
+      </div>
+      <div class="layer">
+        <div class="layer-top">
+          <div>
+            <div class="lyr-num">Layer 04 · Vehicle-specific</div>
+            <div class="lyr-title">Hitch, wiring, fit kits</div>
+            <div class="lyr-desc">Installed to the vehicle. These stay with the car you sell — but a properly installed hitch can add resale value.</div>
+          </div>
+          <div class="pct">~10%</div>
+        </div>
+        <div class="meter"><div class="fill" style="width:10%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALLATION -->
+<section class="band">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">The part you can't unsee</div>
+      <h2>Why professional installation matters more than the box says.</h2>
+      <p>Modern vehicles are not what they were ten years ago. Wiring harnesses, lane-keep cameras, parking sensors, EV battery layouts, plastic fasciae that crack if you look at them wrong — installing a hitch correctly today is closer to surgery than carpentry.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="num">★</div>
+        <h3>Wiring done right</h3>
+        <p>Trailer wiring on a modern vehicle isn't a quick splice. Done wrong, it triggers warning lights, drains batteries, or fails at the worst moment.</p>
+      </div>
+      <div class="card">
+        <div class="num">★</div>
+        <h3>No surprise damage</h3>
+        <p>We know which fasteners are aluminum, which clips snap, and which trim panels can't be re-pressed. A garage install can cost more than the rack itself in trim repairs.</p>
+      </div>
+      <div class="card">
+        <div class="num">★</div>
+        <h3>Torque, not guesswork</h3>
+        <p>A hitch is only as safe as it is torqued. We use vehicle-specific specifications, every time, and we stand behind the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISTAKES -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Lessons we'd rather you skip</div>
+      <h2>The mistakes that quietly cost customers money.</h2>
+      <p>None of these are dramatic. That's why they're so common.</p>
+    </div>
+
+    <div class="mistakes">
+      <div class="mistake"><div class="idx">1</div><div><h4>Shopping by price first.</h4><p>The cheapest rack frequently becomes the most expensive one — once you replace it.</p></div></div>
+      <div class="mistake"><div class="idx">2</div><div><h4>Ignoring tongue weight.</h4><p>Hitch class is a hard limit, not a suggestion. Two e-bikes can exceed a Class I rating instantly.</p></div></div>
+      <div class="mistake"><div class="idx">3</div><div><h4>Buying for the trip you're taking, not the life you live.</h4><p>The next ten weekends matter more than the next weekend.</p></div></div>
+      <div class="mistake"><div class="idx">4</div><div><h4>Skipping the test load.</h4><p>If you can't lift the bike onto it in the showroom, you won't lift it in your driveway.</p></div></div>
+      <div class="mistake"><div class="idx">5</div><div><h4>DIY hitch wiring on a modern vehicle.</h4><p>It's the single most common reason a vehicle ends up at our shop with electrical errors.</p></div></div>
+      <div class="mistake"><div class="idx">6</div><div><h4>Forgetting the cargo box dimensions.</h4><p>If it doesn't open in your garage, it's a yard ornament.</p></div></div>
+      <div class="mistake"><div class="idx">7</div><div><h4>Buying a rack for a vehicle you're about to replace.</h4><p>Worth a 10-minute conversation. We've saved customers thousands here.</p></div></div>
+      <div class="mistake"><div class="idx">8</div><div><h4>Not asking who installs it.</h4><p>The product is half the equation. The install is the other half.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE -->
+<section class="band-dark">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">The Rack N Road difference</div>
+      <h2>You're not buying a rack. You're buying judgment.</h2>
+      <p>Anyone with a website can sell you the same product. What you can't get from a checkout button is the conversation that happens before the purchase — the one where someone with three decades of installs in their hands asks the questions you didn't know to ask.</p>
+    </div>
+
+    <div class="diff-grid">
+      <div class="diff"><div class="ico">35</div><h4>Years of pattern recognition</h4><p>We've seen what fails, what lasts, and what customers regret. We share it openly.</p></div>
+      <div class="diff"><div class="ico">★</div><h4>Authorized dealer access</h4><p>Every brand we sell, we install. If we don't trust it, we don't carry it.</p></div>
+      <div class="diff"><div class="ico">⌥</div><h4>Hands-on fit verification</h4><p>We confirm the system on your actual vehicle, not just on a spec sheet.</p></div>
+      <div class="diff"><div class="ico">∞</div><h4>Long-term support</h4><p>The relationship doesn't end at checkout. Come back for adjustments, swaps, and the next vehicle.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIKE RACKS -->
+<section class="band">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">The most misunderstood category</div>
+      <h2>Bike racks aren't a product. They're a system.</h2>
+      <p>More customers regret a bike rack purchase than any other rack we sell. Almost always, it's because the decision was reduced to "two bikes or four" — when the real variables are bike weight, frame geometry, lift height, and how the system fits the life of the person using it.</p>
+    </div>
+
+    <div class="bike-mosaic">
+      <div class="feature">
+        <h3>The rack you'll actually use is the one that's easy to use.</h3>
+        <p>A rack that takes ten minutes to load is a rack that gets left in the garage. We've watched it happen for 35 years. Ease of loading isn't a luxury feature — it's the single biggest predictor of whether you'll still be riding in three years.</p>
+      </div>
+      <div class="stack">
+        <div class="mini">
+          <h4>E-bikes change the math</h4>
+          <p>A 55-pound e-bike isn't the same problem as a 22-pound road bike. Frame, hitch class, and tongue weight all need to be re-evaluated.</p>
+        </div>
+        <div class="mini">
+          <h4>Frame style matters more than you think</h4>
+          <p>Step-through, full-suspension, carbon — each one rules certain racks in or out. A hanging-style rack on the wrong frame is a scratched paint job waiting to happen.</p>
+        </div>
+        <div class="mini">
+          <h4>Lift height is a silent dealbreaker</h4>
+          <p>If you can't comfortably lift the bike onto the rack, you'll stop using it. Platform-style racks at the right height change everything.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIRST QUESTIONS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">How to shop for a rack</div>
+      <h2>The first question is the one that matters most.</h2>
+      <p>The customers who are happiest a decade later almost never start with price. They lead with the questions that actually predict how much they'll love the setup years from now:</p>
+    </div>
+
+    <div class="compare">
+      <div class="bad">
+        <h4>Common first questions</h4>
+        <ul>
+          <li>"What's the cheapest rack that fits my car?"</li>
+          <li>"Which one has the best reviews online?"</li>
+          <li>"What can I get same-day?"</li>
+          <li>"Will this work for the trip we're taking next weekend?"</li>
+          <li>"How hard is it to install myself?"</li>
+        </ul>
+      </div>
+      <div class="good">
+        <h4>The questions that actually matter</h4>
+        <ul>
+          <li>What will I still own and use in 10 years?</li>
+          <li>What's the right system for the bikes, boards, and gear I actually have?</li>
+          <li>How easy is it to load when I'm tired, in the rain, or alone?</li>
+          <li>What carries over to my next vehicle?</li>
+          <li>Who's standing behind this if something goes wrong on a trip?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="band">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">FAQ</div>
+      <h2>Common questions, answered honestly.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>How do I know if I need a hitch-mounted rack or a roof rack?</summary>
+        <div class="ans">It comes down to lift height, vehicle, and what you're carrying. Heavier bikes, e-bikes, and frequent loading almost always favor a hitch platform. Roof racks remain unmatched for paddleboards, kayaks, and roof boxes. We'll walk you through it on your specific vehicle.</div>
+      </details>
+      <details>
+        <summary>Can I move my rack to a new car?</summary>
+        <div class="ans">Often, yes — especially the platform itself and the accessories. Crossbars and feet may need a new fit kit. Hitches are vehicle-specific. We'll tell you exactly what carries over before you buy.</div>
+      </details>
+      <details>
+        <summary>Do you install racks I bought somewhere else?</summary>
+        <div class="ans">In most cases, yes. We install hitches, racks, and accessories regardless of where they were purchased, and we'll let you know up-front if there's a fit or compatibility concern.</div>
+      </details>
+      <details>
+        <summary>How long does an install take?</summary>
+        <div class="ans">A bare rack swap can take 30 minutes. A hitch and wiring install on a modern SUV typically runs 1–3 hours. We'll give you a precise estimate when you book.</div>
+      </details>
+      <details>
+        <summary>Should I rent a cargo box first?</summary>
+        <div class="ans">If you're not certain how often you'll use one, yes. Renting once or twice answers the question better than any spec sheet. If you start renting more than twice a year, buying usually pays off quickly.</div>
+      </details>
+      <details>
+        <summary>Are e-bikes safe to carry on most racks?</summary>
+        <div class="ans">Only on racks specifically rated for them, mounted to a hitch class that can handle the tongue weight. This is one of the most common mistakes we correct in the shop. Talk to us first.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-final">
+  <div class="container">
+    <div class="kicker">Talk to Rack N Road</div>
+    <h2>Get it right the first time.</h2>
+    <p>Book a 15-minute consultation, walk into one of our shops, or schedule an install. There's no pressure, no upsell — just 35 years of experience pointed at your specific vehicle, gear, and life.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://racknroad.com/store/sacramento/intake/">Contact Us <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="https://racknroad.com/store/sacramento/">Back to the Sacramento Store</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 1991–2026 Rack N Road. Family-owned. Field-tested.</div>
+    <div class="meta-info">
+      Suggested URL: /what-we-stand-for &nbsp;·&nbsp;
+      Meta title: What We Stand For | Rack N Road &nbsp;·&nbsp;
+      Meta description: What we stand for: the owners' beliefs that have kept Rack N Road in business for 35+ years and earned a 4.9 customer rating — we only sell what we can stand behind, and we say so out loud.
+    </div>
+  </div>
+</footer>
+
+<!-- STRUCTURED DATA (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "What We Stand For — The Rack N Road Owners' Beliefs",
+      "description": "The owners' beliefs behind 35+ years and a 4.9 rating: we only sell what we can stand behind, we install what we don't carry at an honest upfront price, and our trusted vendors are everything.",
+      "author": { "@type": "Organization", "name": "Rack N Road" },
+      "publisher": { "@type": "Organization", "name": "Rack N Road" },
+      "mainEntityOfPage": "https://www.racknroad.com/what-we-stand-for"
+    },
+    {
+      "@type": "Organization",
+      "name": "Rack N Road",
+      "url": "https://www.racknroad.com",
+      "foundingDate": "1991",
+      "areaServed": ["Sacramento", "Citrus Heights", "Roseville", "Rocklin", "Lincoln", "Granite Bay", "Orangevale", "Fair Oaks", "Folsom", "El Dorado Hills", "Elk Grove", "Davis", "Auburn", "Placerville"],
+      "brand": ["Yakima", "Thule", "Rhino-Rack", "Kuat", "Saris", "RockyMounts", "Inno", "Curt", "Stealth Hitches", "DECKED", "Front Runner", "Dometic", "SmartCap", "RealTruck"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.racknroad.com/" },
+        { "@type": "ListItem", "position": 2, "name": "What We Stand For", "item": "https://www.racknroad.com/what-we-stand-for" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I know if I need a hitch-mounted rack or a roof rack?", "acceptedAnswer": { "@type": "Answer", "text": "It comes down to lift height, vehicle, and what you're carrying. Heavier bikes, e-bikes, and frequent loading almost always favor a hitch platform. Roof racks remain unmatched for paddleboards, kayaks, and roof boxes. We'll walk you through it on your specific vehicle." } },
+        { "@type": "Question", "name": "Can I move my rack to a new car?", "acceptedAnswer": { "@type": "Answer", "text": "Often, yes — especially the platform itself and the accessories. Crossbars and feet may need a new fit kit. Hitches are vehicle-specific. We'll tell you exactly what carries over before you buy." } },
+        { "@type": "Question", "name": "Do you install racks I bought somewhere else?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. We install hitches, racks, and accessories regardless of where they were purchased, and we'll let you know up-front if there's a fit or compatibility concern." } },
+        { "@type": "Question", "name": "How long does an install take?", "acceptedAnswer": { "@type": "Answer", "text": "A bare rack swap can take 30 minutes. A hitch and wiring install on a modern SUV typically runs 1–3 hours. We'll give you a precise estimate when you book." } },
+        { "@type": "Question", "name": "Should I rent a cargo box first?", "acceptedAnswer": { "@type": "Answer", "text": "If you're not certain how often you'll use one, yes. Renting once or twice answers the question better than any spec sheet. If you start renting more than twice a year, buying usually pays off quickly." } },
+        { "@type": "Question", "name": "Are e-bikes safe to carry on most racks?", "acceptedAnswer": { "@type": "Answer", "text": "Only on racks specifically rated for them, mounted to a hitch class that can handle the tongue weight. This is one of the most common mistakes we correct in the shop. Talk to us first." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  document.querySelectorAll('section .container').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+
+  // Scroll progress bar
+  const bar = document.getElementById('progress');
+  const onScroll = () => {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    bar.style.width = (scrolled * 100) + '%';
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // System load calculator
+  (function(){
+    var ids=["rackW","bike1","bike2","extra"];
+    var totalEl=document.getElementById("calcTotal");
+    var effEl=document.getElementById("calcEff");
+    var breakEl=document.getElementById("calcBreak");
+    var flag=document.getElementById("calcFlag");
+    var flagText=document.getElementById("calcFlagText");
+    if(!totalEl) return;
+    function num(id){var v=parseFloat(document.getElementById(id).value);return isNaN(v)?0:Math.max(0,v);}
+    function update(){
+      var total=ids.reduce(function(s,id){return s+num(id);},0);
+      var dist=num("dist"); if(dist<=0){dist=0;}
+      var eff=Math.round(total*dist);
+      totalEl.textContent=Math.round(total);
+      effEl.textContent=eff;
+      breakEl.innerHTML=Math.round(total)+" lb × ~"+dist.toFixed(1)+" ft back · ≈"+eff+" lb-ft on the receiver";
+      var bikesMax=Math.max(num("bike1"),num("bike2"));
+      if(total<=120 && bikesMax<=45){
+        flag.className="calc-flag is-ok";
+        flagText.innerHTML="A 1.25″ receiver may handle this — but the rack's per-bike limit and your vehicle's rating still decide. Let's confirm the chain.";
+      } else if(total<=160 && bikesMax<=60){
+        flag.className="calc-flag is-watch";
+        flagText.innerHTML="This points toward a 2″ receiver and a mid-to-heavy-duty platform rack. We'll confirm your vehicle's tongue-weight rating.";
+      } else {
+        flag.className="calc-flag is-watch";
+        flagText.innerHTML="At this load you're almost certainly looking at a 2″ receiver and a heavy-duty platform rack. Let's confirm your vehicle's rating before you buy.";
+      }
+    }
+    ["rackW","bike1","bike2","extra","dist"].forEach(function(id){document.getElementById(id).addEventListener("input",update);});
+    update();
+  })();
+</script>
+<script src="store-facts.js"></script>
+</body>
+</html>
